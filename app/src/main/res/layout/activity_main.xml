@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.pupupon.armenianalphabetquiz.MainActivity" >
+    android:orientation="vertical"
+    tools:context="com.pupupon.armenianalphabetquiz.MainActivity">
 
     <TextView
         android:text="QUE"
@@ -19,8 +19,8 @@
         android:gravity="center_vertical|center_horizontal"
         android:layout_weight="4"
         android:textSize="@dimen/textQuestion"
-        android:textColor="@color/Text"
         android:textStyle="bold"
+        android:textColor="@color/colorText"
         android:layout_marginBottom="@dimen/space" />
 
     <LinearLayout
@@ -37,8 +37,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/answer1"
             android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/colorText"
             android:textSize="@dimen/textAnswer"
-            android:textColor="@color/Text"
             android:layout_weight="1" />
 
         <Button
@@ -47,8 +47,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/answer2"
             android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/colorText"
             android:textSize="@dimen/textAnswer"
-            android:textColor="@color/Text"
             android:layout_weight="1" />
 
     </LinearLayout>
@@ -67,8 +67,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/answer3"
             android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/colorText"
             android:textSize="@dimen/textAnswer"
-            android:textColor="@color/Text"
             android:layout_weight="1" />
 
         <Button
@@ -77,9 +77,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/answer4"
             android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/colorText"
             android:textSize="@dimen/textAnswer"
-            android:textColor="@color/Text"
             android:layout_weight="1" />
+
     </LinearLayout>
 
     <TextView
