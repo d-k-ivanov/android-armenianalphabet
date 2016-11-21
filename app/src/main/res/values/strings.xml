@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Armenian Alphabet Quiz</string>
 
+    <string name="question">Ա ա Բ Լ</string>
+    <string name="answer1">ANS</string>
+    <string name="answer2">ANS</string>
+    <string name="answer3">ANS</string>
+    <string name="answer4">ANS</string>
+    <string name="result">RESULT</string>
+
 </resources>

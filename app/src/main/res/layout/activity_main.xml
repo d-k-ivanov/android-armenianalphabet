@@ -12,7 +12,7 @@
     tools:context="com.pupupon.armenianalphabetquiz.MainActivity">
 
     <TextView
-        android:text="QUE"
+        android:text="@string/question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textQuestion"
@@ -32,7 +32,7 @@
         android:layout_marginBottom="@dimen/space" >
 
         <Button
-            android:text="ANS"
+            android:text="@string/answer1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/answer1"
@@ -42,7 +42,7 @@
             android:layout_weight="1" />
 
         <Button
-            android:text="ANS"
+            android:text="@string/answer2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/answer2"
@@ -62,7 +62,7 @@
         android:layout_marginBottom="@dimen/space" >
 
         <Button
-            android:text="ANS"
+            android:text="@string/answer3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/answer3"
@@ -72,7 +72,7 @@
             android:layout_weight="1" />
 
         <Button
-            android:text="ANS"
+            android:text="@string/answer4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/answer4"
@@ -84,7 +84,7 @@
     </LinearLayout>
 
     <TextView
-        android:text="RESULT"
+        android:text="@string/result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textResult"
