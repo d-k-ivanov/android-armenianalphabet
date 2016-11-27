@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#0d47a1</color>
+    <color name="colorPrimary">#311B92</color>
     <color name="colorPrimaryDark">#b71c1c</color>
-    <color name="colorBackground">#ffab00</color>
+    <color name="colorBackground">#FFA000</color>
 
     <color name="colorAccent">#333333</color>
-    <color name="colorText">#000000</color>
+    <color name="defaultText">#ffffff</color>
+    <color name="blackText">#000000</color>
+
+    <color name="questionBackground">#FFA000</color>
+    <color name="questionText">#000000</color>
+
+    <color name="buttonBackground">#263238</color>
+    <color name="buttonBorder">#9E9E9E</color>
+    <color name="buttonBackgroundPressed">#37474F</color>
+    <color name="buttonBorderPressed">#FFFFFF</color>
+
+    <color name="buttonGreenBackground">#2E7D32</color>
+    <color name="buttonGreenBorder">#9E9E9E</color>
+    <color name="buttonGreenBackgroundPressed">#00C853</color>
+    <color name="buttonGreenBorderPressed">#FFFFFF</color>
+
+    <color name="buttonRedBackground">#c62828</color>
+    <color name="buttonRedBorder">#9E9E9E</color>
+    <color name="buttonRedBackgroundPressed">#d50000</color>
+    <color name="buttonRedBorderPressed">#FFFFFF</color>
+
 
     <color name="answerBackground">#000000</color>
     <color name="answerDefaultText">#ffffff</color>
     <color name="answerCorrectText">#00c853</color>
     <color name="answerIncorrectText">#d50000</color>
+
+
 </resources>

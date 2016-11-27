@@ -3,14 +3,82 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:orientation">vertical</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+    <style name="questionSection" parent="AppTheme">
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:layout_weight">4</item>
+        <item name="android:textSize">@dimen/textQuestion</item>
+        <item name="android:textColor">@color/questionText</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="answerSection" parent="AppTheme">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="answerButton" parent="answerSection">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/button</item>
+        <item name="android:textColor">@color/answerDefaultText</item>
+        <item name="android:textSize">@dimen/textAnswer</item>
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height"> match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="answerCorrectButton" parent="answerSection">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/button_green</item>
+        <item name="android:textColor">@color/answerDefaultText</item>
+        <item name="android:textSize">@dimen/textAnswer</item>
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height"> match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="answerIncorrectButton" parent="answerSection">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/button_red</item>
+        <item name="android:textColor">@color/answerDefaultText</item>
+        <item name="android:textSize">@dimen/textAnswer</item>
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height"> match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="resultSection" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:background">@color/answerBackground</item>
+        <item name="android:textSize">@dimen/textResult</item>
+        <item name="android:textColor">@color/answerDefaultText</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="resultSectionHidden" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:background">@color/colorBackground</item>
+        <item name="android:textSize">@dimen/textResult</item>
+        <item name="android:textColor">@color/colorBackground</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>
