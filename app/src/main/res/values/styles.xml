@@ -35,7 +35,7 @@
     <style name="answerButton" parent="answerSection">
         <item name="android:layout_margin">5dp</item>
         <item name="android:background">@drawable/button</item>
-        <item name="android:textColor">@color/answerDefaultText</item>
+        <item name="android:textColor">@color/defaultButtonText</item>
         <item name="android:textSize">@dimen/textAnswer</item>
         <item name="android:layout_gravity">center_vertical|center_horizontal</item>
         <item name="android:layout_width">match_parent</item>
@@ -44,11 +44,11 @@
     </style>
     <style name="answerCorrectButton" parent="answerButton">
         <item name="android:background">@drawable/button_green</item>
-        <item name="android:textColor">@color/answerCorrectButtonText</item>
+        <item name="android:textColor">@color/greenButtonText</item>
     </style>
     <style name="answerIncorrectButton" parent="answerButton">
         <item name="android:background">@drawable/button_red</item>
-        <item name="android:textColor">@color/answerIncorrectButtonText</item>
+        <item name="android:textColor">@color/redButtonText</item>
     </style>
 
     <style name="resultSection" parent="AppTheme">
@@ -56,9 +56,9 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
         <item name="android:gravity">center_vertical|center_horizontal</item>
-        <item name="android:background">@color/answerBackground</item>
+        <item name="android:background">@color/resultBackground</item>
         <item name="android:textSize">@dimen/textResult</item>
-        <item name="android:textColor">@color/answerDefaultText</item>
+        <item name="android:textColor">@color/resultDefaultText</item>
         <item name="android:textStyle">bold</item>
     </style>
     <style name="resultSectionHidden" parent="resultSection">
@@ -66,10 +66,10 @@
         <item name="android:textColor">@color/colorBackground</item>
     </style>
     <style name="resultSectionCorrect" parent="resultSection">
-        <item name="android:textColor">@color/answerCorrectText</item>
+        <item name="android:textColor">@color/resultCorrectText</item>
     </style>
     <style name="resultSectionIncorrect" parent="resultSection">
-        <item name="android:textColor">@color/answerIncorrectText</item>
+        <item name="android:textColor">@color/resultIncorrectText</item>
     </style>
 
 </resources>
