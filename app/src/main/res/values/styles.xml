@@ -15,6 +15,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
     <style name="questionSection" parent="AppTheme">
         <item name="android:gravity">center_vertical|center_horizontal</item>
         <item name="android:layout_weight">4</item>
@@ -24,6 +25,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+
     <style name="answerSection" parent="AppTheme">
         <item name="android:orientation">horizontal</item>
         <item name="android:layout_weight">1</item>
@@ -40,26 +42,15 @@
         <item name="android:layout_height"> match_parent</item>
         <item name="android:layout_weight">1</item>
     </style>
-    <style name="answerCorrectButton" parent="answerSection">
-        <item name="android:layout_margin">5dp</item>
+    <style name="answerCorrectButton" parent="answerButton">
         <item name="android:background">@drawable/button_green</item>
-        <item name="android:textColor">@color/answerDefaultText</item>
-        <item name="android:textSize">@dimen/textAnswer</item>
-        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height"> match_parent</item>
-        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/answerCorrectButtonText</item>
     </style>
-    <style name="answerIncorrectButton" parent="answerSection">
-        <item name="android:layout_margin">5dp</item>
+    <style name="answerIncorrectButton" parent="answerButton">
         <item name="android:background">@drawable/button_red</item>
-        <item name="android:textColor">@color/answerDefaultText</item>
-        <item name="android:textSize">@dimen/textAnswer</item>
-        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height"> match_parent</item>
-        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/answerIncorrectButtonText</item>
     </style>
+
     <style name="resultSection" parent="AppTheme">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -70,15 +61,15 @@
         <item name="android:textColor">@color/answerDefaultText</item>
         <item name="android:textStyle">bold</item>
     </style>
-    <style name="resultSectionHidden" parent="AppTheme">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:gravity">center_vertical|center_horizontal</item>
+    <style name="resultSectionHidden" parent="resultSection">
         <item name="android:background">@color/colorBackground</item>
-        <item name="android:textSize">@dimen/textResult</item>
         <item name="android:textColor">@color/colorBackground</item>
-        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="resultSectionCorrect" parent="resultSection">
+        <item name="android:textColor">@color/answerCorrectText</item>
+    </style>
+    <style name="resultSectionIncorrect" parent="resultSection">
+        <item name="android:textColor">@color/answerIncorrectText</item>
     </style>
 
 </resources>

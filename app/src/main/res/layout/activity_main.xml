@@ -22,7 +22,7 @@
         <Button
             android:text="@string/answer2"
             android:id="@+id/answer2"
-            style="@style/answerCorrectButton" />
+            style="@style/answerButton" />
 
     </LinearLayout>
 
@@ -38,7 +38,7 @@
         <Button
             android:text="@string/answer4"
             android:id="@+id/answer4"
-            style="@style/answerIncorrectButton" />
+            style="@style/answerButton" />
 
     </LinearLayout>
 
