@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     Button answerButton3;
     Button answerButton4;
     TextView resultText;
+    Question q;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
     public void init() {
         setContentView(R.layout.activity_main);
+
         // Question Section
         questionText = (TextView) findViewById(R.id.textQuestion);
         questionText.setOnLongClickListener(this);
@@ -50,23 +52,39 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         // Init Result:
         TextViewCompat.setTextAppearance(resultText, R.style.resultSectionHidden);
         resultText.setBackgroundColor(ContextCompat.getColor(this, R.color.colorBackground));
+
+        q = new Question();
+        q.initQuestion(questionText,answerButton1,answerButton2,answerButton3,answerButton4);
+
     }
 
     public void onClick(View view) {
 
         Button button = (Button) view;
+        if (q.checkQuestion((String) button.getText())) {
 
-        //button.setBackgroundResource(R.drawable.button_green);
-        //button.setBackgroundResource(R.drawable.button_red);
-        //TextViewCompat.setTextAppearance(button, R.style.answerCorrectButton);
+            button.setBackgroundResource(R.drawable.button_green);
+            TextViewCompat.setTextAppearance(button, R.style.answerCorrectButton);
 
+            TextViewCompat.setTextAppearance(resultText, R.style.resultSectionCorrect);
+
+        }
+        else {
+            button.setBackgroundResource(R.drawable.button_red);
+            TextViewCompat.setTextAppearance(button, R.style.answerIncorrectButton);
+
+            TextViewCompat.setTextAppearance(resultText, R.style.resultSectionIncorrect);
+        }
+
+        resultText.setText(q.getRightAnswer());
+        resultText.setBackgroundColor(ContextCompat.getColor(this, R.color.resultBackground));
+
+        // Button animation
         final Animation bounce = AnimationUtils.loadAnimation(this, R.anim.button_bounce);
         ButtonBounceInterpolator interpolator = new ButtonBounceInterpolator(0.1, 20);
         bounce.setInterpolator(interpolator);
         button.startAnimation(bounce);
-
-        TextViewCompat.setTextAppearance(resultText, R.style.resultSection);
-        resultText.setBackgroundColor(ContextCompat.getColor(this, R.color.resultBackground));
+        // Result animation
         final Animation slide = AnimationUtils.loadAnimation(this, R.anim.result_slide);
         resultText.startAnimation(slide);
 
