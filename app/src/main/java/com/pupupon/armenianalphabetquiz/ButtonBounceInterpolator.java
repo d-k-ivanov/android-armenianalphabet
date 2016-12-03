@@ -1,8 +1,8 @@
 package com.pupupon.armenianalphabetquiz;
 
 class ButtonBounceInterpolator implements android.view.animation.Interpolator {
-    double mAmplitude = 1;
-    double mFrequency = 10;
+    private double mAmplitude = 1;
+    private double mFrequency = 10;
 
     ButtonBounceInterpolator(double amplitude, double frequency) {
         mAmplitude = amplitude;
