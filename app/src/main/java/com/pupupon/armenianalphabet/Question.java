@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 
-public class Question {
+class Question {
     private String question;
     private String answer;
     private String wrong1;

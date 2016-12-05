@@ -2,7 +2,11 @@
 <resources>
     <!-- Activities -->
     <string name="app_name">Армянский Алфавит</string>
+    <string name="alphabet_title">Армянский Алфавит: Алфавит</string>
     <string name="quiz_title">Армянский Алфавит: Практика</string>
+    <string name="settings_title">Армянский Алфавит: Настройки</string>
+    <string name="help_title">Армянский Алфавит: Помощь</string>
+    <string name="about_title">Армянский Алфавит: О программе</string>
 
     <!-- Menu -->
     <string name="menuEntry1">Алфавит</string>
@@ -10,6 +14,13 @@
     <string name="menuEntry3">Настройки</string>
     <string name="menuEntry4">Помощь</string>
     <string name="menuEntry5">О программе</string>
+
+    <!-- About -->
+    <string name="aboutText">
+        Армянский алфавит(Армянский: Հայոց գրեր Hayots grer or Հայոց այբուբեն Hayots aybuben) звуковое письмо армянского языка. Армянский алфавит создан в 405—406 годах н. э. Месропом Маштоцем, армянским учёным и духовным лидером. Армянский алфавит первоначально включал 36 букв, после был дополнен до 39.
+        Армянское слово "алфавит" - այբուբեն aybuben (Армянское произношение: [ɑjbubɛn]), названо по первым двум буквам Армянского алфавита Ա այբ ayb и Բ բեն ben. Армянский язык имеет горизонтальную структуру и письмо слева напрво.
+    </string>
+    <string name="aboutCopyright">Copyright © 2016 Дмитрий Иванов.</string>
 
 
 </resources>

@@ -9,5 +9,7 @@
     <dimen name="textAnswer">40sp</dimen>
     <dimen name="textResult">40sp</dimen>
 
+    <dimen name="textAbout">20sp</dimen>
+
 
 </resources>

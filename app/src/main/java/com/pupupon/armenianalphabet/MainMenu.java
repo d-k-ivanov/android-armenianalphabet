@@ -21,7 +21,7 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
         droidSansArmenian = Typeface.createFromAsset(getAssets(), "fonts/DroidSansArmenian.ttf");
         sylfaen = Typeface.createFromAsset(getAssets(), "fonts/Sylfaen.ttf");
-        mainFont = sylfaen;
+        mainFont = droidSansArmenian;
 
         // Answer Section
         buttons[0] = (Button) findViewById(R.id.menuEntry1);
@@ -38,6 +38,8 @@ public class MainMenu extends AppCompatActivity {
     }
 
     public void startMenuEntry1(View view) {
+        Intent alphabet = new Intent(this, AlphabetActivity.class);
+        startActivity(alphabet);
     }
 
     public void startMenuEntry2(View view) {
@@ -46,11 +48,17 @@ public class MainMenu extends AppCompatActivity {
     }
 
     public void startMenuEntry3(View view) {
+        Intent settings = new Intent(this, SettingsActivity.class);
+        startActivity(settings);
     }
 
     public void startMenuEntry4(View view) {
+        Intent help = new Intent(this, HelpActivity.class);
+        startActivity(help);
     }
 
     public void startMenuEntry5(View view) {
+        Intent about = new Intent(this, AboutActivity.class);
+        startActivity(about);
     }
 }

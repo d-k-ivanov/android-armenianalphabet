@@ -33,7 +33,7 @@ public class QuizActivity extends AppCompatActivity implements OnClickListener, 
 
         droidSansArmenian = Typeface.createFromAsset(getAssets(), "fonts/DroidSansArmenian.ttf");
         sylfaen = Typeface.createFromAsset(getAssets(), "fonts/Sylfaen.ttf");
-        mainFont = sylfaen;
+        mainFont = droidSansArmenian;
 
         init();
     }

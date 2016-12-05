@@ -1,7 +1,11 @@
 <resources>
     <!-- Activities -->
     <string name="app_name">Armenian Alphabet</string>
+    <string name="alphabet_title">Armenian Alphabet: Alphabet</string>
     <string name="quiz_title">Armenian Alphabet: Quiz</string>
+    <string name="settings_title">Armenian Alphabet: Settings</string>
+    <string name="help_title">Armenian Alphabet: Help</string>
+    <string name="about_title">Armenian Alphabet: About</string>
 
     <!-- Menu -->
     <string name="menuEntry1">Alphabet</string>
@@ -58,5 +62,13 @@
     <string name="letter37" translatable="false">և;և;ew ev[jɛv]</string>
     <string name="letter38" translatable="false">Օ;օ;ô[o]</string>
     <string name="letter39" translatable="false">Ֆ;ֆ;f[f]</string>
+
+    <!-- About -->
+    <string name="aboutText">
+        The Armenian alphabet (Armenian: Հայոց գրեր Hayots grer or Հայոց այբուբեն Hayots aybuben) is an alphabetical writing system used to write Armenian. It was developed around 405 CE by Mesrop Mashtots, an Armenian linguist and ecclesiastical leader, and originally included 36 letters and now includes 39.
+        The Armenian word for "alphabet" is այբուբեն aybuben (Armenian pronunciation: [ɑjbubɛn]), named after the first two letters of the Armenian alphabet Ա այբ ayb and Բ բեն ben. Armenian is written horizontally, left-to-right
+    </string>
+    <string name="aboutCopyright">Copyright © 2016 Dmitry Ivanov.</string>
+
 
 </resources>

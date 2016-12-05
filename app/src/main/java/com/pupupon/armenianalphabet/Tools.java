@@ -2,7 +2,7 @@ package com.pupupon.armenianalphabet;
 
 import java.util.Random;
 
-public class Tools {
+class Tools {
 
     /**
      * Returns a pseudo-random number between min and max, inclusive.
