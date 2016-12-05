@@ -1,4 +1,4 @@
-package com.pupupon.armenianalphabetquiz;
+package com.pupupon.armenianalphabet;
 
 import android.widget.Button;
 import android.widget.TextView;
@@ -20,18 +20,18 @@ public class Question {
         String[] rawWrong2 = lt3.split(";");
         String[] rawWrong3 = lt4.split(";");
 
-        int questionPosition = Tools.randInt(1, 5);
+        int[] exclude = {-1};
+        int questionPosition = Tools.randInt(0, 2, exclude);
         question = rawQuestion[questionPosition];
-        //question = "Ա";
-        int[] exclude = {questionPosition};
-        //answerPosition = getAnswerPosition(questionPosition);
-        int answerPosition = Tools.randInt(1, 5, exclude);
-        answer = rawQuestion[answerPosition];
+        exclude[0] = questionPosition;
+        int answerPosition = Tools.randInt(0, 2, exclude);
 
+        answer = rawQuestion[answerPosition];
         wrong1 = rawWrong1[answerPosition];
         wrong2 = rawWrong2[answerPosition];
         wrong3 = rawWrong3[answerPosition];
-        resultText = rawQuestion[1] + " " + rawQuestion[2] + " " + rawQuestion[3] + " " + rawQuestion[4] + " " + rawQuestion[5];
+
+        resultText = rawQuestion[0] + " - " + rawQuestion[1] + " - " + rawQuestion[2];
 
     }
 
@@ -48,26 +48,11 @@ public class Question {
         for(int i = 0; i < 4; i++){
             buttons[i].setText(answers[i]);
         }
-        //buttons[0].setText(answers[0]);
-        //buttons[1].setText(answers[1]);
-        //buttons[2].setText(answers[2]);
-        //buttons[3].setText(answers[3]);
-        //answerButton1.setText(answers[0]);
-        //answerButton2.setText(answers[1]);
-        //answerButton3.setText(answers[2]);
-        //answerButton4.setText(answers[3]);
     }
 
     String getRightAnswer() {
         return this.resultText;
     }
 
-    int getAnswerPosition(int questionPosition) {
-        int answerPosition = questionPosition;
-        while(answerPosition == questionPosition){
-            answerPosition = Tools.randInt(1,5);
-        }
-        return answerPosition;
-    }
 
 }

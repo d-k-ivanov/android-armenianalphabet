@@ -1,4 +1,4 @@
-package com.pupupon.armenianalphabetquiz;
+package com.pupupon.armenianalphabet;
 
 import org.junit.Test;
 

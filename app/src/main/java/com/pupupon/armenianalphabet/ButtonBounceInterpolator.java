@@ -1,4 +1,4 @@
-package com.pupupon.armenianalphabetquiz;
+package com.pupupon.armenianalphabet;
 
 class ButtonBounceInterpolator implements android.view.animation.Interpolator {
     private double mAmplitude = 1;

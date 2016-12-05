@@ -1,9 +1,12 @@
-package com.pupupon.armenianalphabetquiz;
+package com.pupupon.armenianalphabet;
 
+import android.graphics.Typeface;
 import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.TextViewCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
@@ -17,45 +20,52 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     // Vars:
     TextView questionText;
     Button[] buttons =  new Button[4];
-    //Button answerButton1;
-    //Button answerButton2;
-    //Button answerButton3;
-   // Button answerButton4;
     TextView resultText;
     Question q;
+    Typeface droidSansArmenian;
+    Typeface sylfaen;
+    Typeface mainFont;
+    Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        droidSansArmenian = Typeface.createFromAsset(getAssets(), "fonts/DroidSansArmenian.ttf");
+        sylfaen = Typeface.createFromAsset(getAssets(), "fonts/Sylfaen.ttf");
+        mainFont = droidSansArmenian;
+
         init();
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_settings, menu);
+        return true;
     }
 
     public void init() {
         setContentView(R.layout.activity_main);
 
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         // Question Section
         questionText = (TextView) findViewById(R.id.textQuestion);
         questionText.setOnLongClickListener(this);
+        questionText.setTypeface(mainFont);
 
         // Answer Section
-        //answerButton1 = (Button) findViewById(R.id.answer1);
-        //answerButton2 = (Button) findViewById(R.id.answer2);
-        //answerButton3 = (Button) findViewById(R.id.answer3);
-        //answerButton4 = (Button) findViewById(R.id.answer4);
         buttons[0] = (Button) findViewById(R.id.answer1);
         buttons[1] = (Button) findViewById(R.id.answer2);
         buttons[2] = (Button) findViewById(R.id.answer3);
         buttons[3] = (Button) findViewById(R.id.answer4);
 
+        // Init Buttons:
         for (Button i: buttons) {
             i.setOnClickListener(this);
+            i.setTypeface(mainFont);
         }
-
-        // Init Buttons:
-        //answerButton1.setOnClickListener(this);
-        //answerButton2.setOnClickListener(this);
-        //answerButton3.setOnClickListener(this);
-        //answerButton4.setOnClickListener(this);
 
         // Result Section:
         resultText = (TextView) findViewById(R.id.textResult);
@@ -66,12 +76,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
         // Initialize question by random number:
         String[] letters = Tools.randLetters(1,39);
-        String lt1 = (String) getResources().getText(getResources().getIdentifier(letters[0], "string", "com.pupupon.armenianalphabetquiz"));
-        String lt2 = (String) getResources().getText(getResources().getIdentifier(letters[1], "string", "com.pupupon.armenianalphabetquiz"));
-        String lt3 = (String) getResources().getText(getResources().getIdentifier(letters[2], "string", "com.pupupon.armenianalphabetquiz"));
-        String lt4 = (String) getResources().getText(getResources().getIdentifier(letters[3], "string", "com.pupupon.armenianalphabetquiz"));
+        String lt1 = (String) getResources().getText(getResources().getIdentifier(letters[0], "string", "com.pupupon.armenianalphabet"));
+        String lt2 = (String) getResources().getText(getResources().getIdentifier(letters[1], "string", "com.pupupon.armenianalphabet"));
+        String lt3 = (String) getResources().getText(getResources().getIdentifier(letters[2], "string", "com.pupupon.armenianalphabet"));
+        String lt4 = (String) getResources().getText(getResources().getIdentifier(letters[3], "string", "com.pupupon.armenianalphabet"));
         q = new Question(lt1,lt2,lt3,lt4);
-        //q.initQuestion(questionText,answerButton1,answerButton2,answerButton3,answerButton4);
         q.initQuestion(questionText,buttons);
 
     }
@@ -100,6 +109,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
         resultText.setText(q.getRightAnswer());
         resultText.setBackgroundColor(ContextCompat.getColor(this, R.color.resultBackground));
+        resultText.setTypeface(mainFont);
 
         // Button animation
         final Animation bounce = AnimationUtils.loadAnimation(this, R.anim.button_bounce);
@@ -111,13 +121,29 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         resultText.startAnimation(slide);
 
         // Execute some code after 2 seconds have passed
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        Handler handler1 = new Handler();
+        handler1.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                for (Button i: buttons) {
+                    if(q.checkQuestion((String)i.getText())){
+                        i.setBackgroundResource(R.drawable.button_green);
+                        TextViewCompat.setTextAppearance(i, R.style.answerCorrectButton);
+                        i.startAnimation(bounce);
+                    }
+                }
+            }
+        }, 500);
+
+
+        // Execute some code after 2 seconds have passed
+        Handler handler2 = new Handler();
+        handler2.postDelayed(new Runnable() {
             @Override
             public void run() {
                 init();
             }
-        }, 3000);
+        }, 2000);
 
     }
 

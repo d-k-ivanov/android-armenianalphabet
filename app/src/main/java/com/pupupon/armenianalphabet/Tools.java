@@ -1,4 +1,4 @@
-package com.pupupon.armenianalphabetquiz;
+package com.pupupon.armenianalphabet;
 
 import java.util.Random;
 
@@ -11,24 +11,18 @@ public class Tools {
      *
      * @param min Minimum value
      * @param max Maximum value.  Must be greater than min.
+     * @param exclude list of excluded numbers in range.
      * @return Integer between min and max, inclusive.
      * @see java.util.Random#nextInt(int)
      */
     public static int randInt(int min, int max, int[] exclude) {
-
-        // NOTE: This will (intentionally) not run as written so that folks
-        // copy-pasting have to think about how to initialize their
-        // Random instance.  Initialization of the Random instance is outside
-        // the main scope of the question, but some decent options are to have
-        // a field that is initialized once and then re-used as needed or to
-        // use ThreadLocalRandom (if using at least Java 1.7).
         Random rand = new Random();
 
         // nextInt is normally exclusive of the top value,
         // so add 1 to make it inclusive
-        int randomNum = 0;
+        int randomNum = rand.nextInt((max - min) + 1) + min;
+        // for each number in excluded list check if it isn't the same as random number.
         for (int i : exclude) {
-            randomNum = rand.nextInt((max - min) + 1) + min;
             while (randomNum == i) {
                 randomNum = rand.nextInt((max - min) + 1) + min;
             }
@@ -37,14 +31,17 @@ public class Tools {
 
         return randomNum;
     }
-    public static int randInt(int min, int max) {
-
-        // NOTE: This will (intentionally) not run as written so that folks
-        // copy-pasting have to think about how to initialize their
-        // Random instance.  Initialization of the Random instance is outside
-        // the main scope of the question, but some decent options are to have
-        // a field that is initialized once and then re-used as needed or to
-        // use ThreadLocalRandom (if using at least Java 1.7).
+    /**
+     * Returns a pseudo-random number between min and max, inclusive.
+     * The difference between min and max can be at most
+     * <code>Integer.MAX_VALUE - 1</code>.
+     *
+     * @param min Minimum value
+     * @param max Maximum value.  Must be greater than min.
+     * @return Integer between min and max, inclusive.
+     * @see java.util.Random#nextInt(int)
+     */
+    /*public static int randInt(int min, int max) {
         Random rand = new Random();
 
         // nextInt is normally exclusive of the top value,
@@ -52,11 +49,11 @@ public class Tools {
         int randomNum = rand.nextInt((max - min) + 1) + min;
 
         return randomNum;
-    }
+    }*/
 
     public static String[] randLetters(int min, int max) {
         String[] letters = {"","","",""};
-        int[] exclude = {0,0,0};
+        int[] exclude = {-1,-1,-1};
         int a = randInt(min,max, exclude);
         exclude[0] = a;
         int b = randInt(min,max, exclude);
