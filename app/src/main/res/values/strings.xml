@@ -1,54 +1,62 @@
 <resources>
+    <!-- Activities -->
     <string name="app_name">Armenian Alphabet</string>
     <string name="quiz_title">Armenian Alphabet: Quiz</string>
 
-    <string name="question">QUE</string>
-    <string name="answer1">ANS</string>
-    <string name="answer2">ANS</string>
-    <string name="answer3">ANS</string>
-    <string name="answer4">ANS</string>
-    <string name="result">RESULT</string>
+    <!-- Menu -->
+    <string name="menuEntry1">Alphabet</string>
+    <string name="menuEntry2">Quiz</string>
+    <string name="menuEntry3">Settings</string>
+    <string name="menuEntry4">Help</string>
+    <string name="menuEntry5">About</string>
 
-    <string name="menu_settings_text">Settings</string>
+    <!-- Init Strings -->
+    <string name="question" translatable="false">QUE</string>
+    <string name="answer1" translatable="false">ANS</string>
+    <string name="answer2" translatable="false">ANS</string>
+    <string name="answer3" translatable="false">ANS</string>
+    <string name="answer4" translatable="false">ANS</string>
+    <string name="result" translatable="false">RESULT</string>
 
-    <string name="letter1">Ա;ա;a[ɑ]</string>
-    <string name="letter2">Բ;բ;b[b]</string>
-    <string name="letter3">Գ;գ;g[g]</string>
-    <string name="letter4">Դ;դ;d[d]</string>
-    <string name="letter5">Ե;ե;e[jɛ]</string>
-    <string name="letter6">Զ;զ;z[z]</string>
-    <string name="letter7">Է;է;ē[ɛ]</string>
-    <string name="letter8">Ը;ը;ə[ə]</string>
-    <string name="letter9">Թ;թ;t‘[tʰ]</string>
-    <string name="letter10">Ժ;ժ;zh ž[ʒ]</string>
-    <string name="letter11">Ի;ի;i[i]</string>
-    <string name="letter12">Լ;լ;l[l]</string>
-    <string name="letter13">Խ;խ;kh x[χ]</string>
-    <string name="letter14">Ծ;ծ;t͡s c[t͡s]</string>
-    <string name="letter15">Կ;կ;k[kʼ]</string>
-    <string name="letter16">Հ;հ;h[h]</string>
-    <string name="letter17">Ձ;ձ;d͡z j[d͡z]</string>
-    <string name="letter18">Ղ;ղ;gh ł[ʁ]</string>
-    <string name="letter19">Ճ;ճ;ch č[t͡ʃ]</string>
-    <string name="letter20">Մ;մ;m[m]</string>
-    <string name="letter21">Յ;յ;y[j]</string>
-    <string name="letter22">Ն;ն;n[n]</string>
-    <string name="letter23">Շ;շ;sh š[ʃ]</string>
-    <string name="letter24">Ո;ո;vo[vɔ]</string>
-    <string name="letter25">Չ;չ;tsh č‘[t͡ʃʰ]</string>
-    <string name="letter26">Պ;պ;p[pʼ]</string>
-    <string name="letter27">Ջ;ջ;dzh ǰ[ʤ]</string>
-    <string name="letter28">Ռ;ռ;r̄[r]</string>
-    <string name="letter29">Ս;ս;s[s]</string>
-    <string name="letter30">Վ;վ;v[v]</string>
-    <string name="letter31">Տ;տ;t[tʼ]</string>
-    <string name="letter32">Ր;ր;re r[ɾ]</string>
-    <string name="letter33">Ց;ց;t͡sʰ c‘[t͡sʰ]</string>
-    <string name="letter34">Ւ;ւ;ve w[w]</string>
-    <string name="letter35">Փ;փ;ph p‘[pʰ]</string>
-    <string name="letter36">Ք;ք;k‘[kʰ]</string>
-    <string name="letter37">և;և;ew ev[jɛv]</string>
-    <string name="letter38">Օ;օ;ô[o]</string>
-    <string name="letter39">Ֆ;ֆ;f[f]</string>
+    <!-- Letters -->
+    <string name="letter1" translatable="false">Ա;ա;a[ɑ]</string>
+    <string name="letter2" translatable="false">Բ;բ;b[b]</string>
+    <string name="letter3" translatable="false">Գ;գ;g[g]</string>
+    <string name="letter4" translatable="false">Դ;դ;d[d]</string>
+    <string name="letter5" translatable="false">Ե;ե;e[jɛ]</string>
+    <string name="letter6" translatable="false">Զ;զ;z[z]</string>
+    <string name="letter7" translatable="false">Է;է;ē[ɛ]</string>
+    <string name="letter8" translatable="false">Ը;ը;ə[ə]</string>
+    <string name="letter9" translatable="false">Թ;թ;t‘[tʰ]</string>
+    <string name="letter10" translatable="false">Ժ;ժ;zh ž[ʒ]</string>
+    <string name="letter11" translatable="false">Ի;ի;i[i]</string>
+    <string name="letter12" translatable="false">Լ;լ;l[l]</string>
+    <string name="letter13" translatable="false">Խ;խ;kh x[χ]</string>
+    <string name="letter14" translatable="false">Ծ;ծ;t͡s c[t͡s]</string>
+    <string name="letter15" translatable="false">Կ;կ;k[kʼ]</string>
+    <string name="letter16" translatable="false">Հ;հ;h[h]</string>
+    <string name="letter17" translatable="false">Ձ;ձ;d͡z j[d͡z]</string>
+    <string name="letter18" translatable="false">Ղ;ղ;gh ł[ʁ]</string>
+    <string name="letter19" translatable="false">Ճ;ճ;ch č[t͡ʃ]</string>
+    <string name="letter20" translatable="false">Մ;մ;m[m]</string>
+    <string name="letter21" translatable="false">Յ;յ;y[j]</string>
+    <string name="letter22" translatable="false">Ն;ն;n[n]</string>
+    <string name="letter23" translatable="false">Շ;շ;sh š[ʃ]</string>
+    <string name="letter24" translatable="false">Ո;ո;vo[vɔ]</string>
+    <string name="letter25" translatable="false">Չ;չ;tsh č‘[t͡ʃʰ]</string>
+    <string name="letter26" translatable="false">Պ;պ;p[pʼ]</string>
+    <string name="letter27" translatable="false">Ջ;ջ;dzh ǰ[ʤ]</string>
+    <string name="letter28" translatable="false">Ռ;ռ;r̄[r]</string>
+    <string name="letter29" translatable="false">Ս;ս;s[s]</string>
+    <string name="letter30" translatable="false">Վ;վ;v[v]</string>
+    <string name="letter31" translatable="false">Տ;տ;t[tʼ]</string>
+    <string name="letter32" translatable="false">Ր;ր;re r[ɾ]</string>
+    <string name="letter33" translatable="false">Ց;ց;t͡sʰ c‘[t͡sʰ]</string>
+    <string name="letter34" translatable="false">Ւ;ւ;ve w[w]</string>
+    <string name="letter35" translatable="false">Փ;փ;ph p‘[pʰ]</string>
+    <string name="letter36" translatable="false">Ք;ք;k‘[kʰ]</string>
+    <string name="letter37" translatable="false">և;և;ew ev[jɛv]</string>
+    <string name="letter38" translatable="false">Օ;օ;ô[o]</string>
+    <string name="letter39" translatable="false">Ֆ;ֆ;f[f]</string>
 
 </resources>

@@ -3,7 +3,11 @@
     <dimen name="activity_horizontal_margin">0dp</dimen>
     <dimen name="activity_vertical_margin">0dp</dimen>
 
+    <dimen name="menuEntryText">36sp</dimen>
+
     <dimen name="textQuestion">120sp</dimen>
     <dimen name="textAnswer">40sp</dimen>
     <dimen name="textResult">40sp</dimen>
+
+
 </resources>

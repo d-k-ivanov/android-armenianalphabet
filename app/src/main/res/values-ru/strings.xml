@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Activities -->
+    <string name="app_name">Армянский Алфавит</string>
+    <string name="quiz_title">Армянский Алфавит: Практика</string>
+
+    <!-- Menu -->
+    <string name="menuEntry1">Алфавит</string>
+    <string name="menuEntry2">Практика</string>
+    <string name="menuEntry3">Настройки</string>
+    <string name="menuEntry4">Помощь</string>
+    <string name="menuEntry5">О программе</string>
+
+
+</resources>

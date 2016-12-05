@@ -16,7 +16,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity implements OnClickListener, OnLongClickListener {
+public class QuizActivity extends AppCompatActivity implements OnClickListener, OnLongClickListener {
     // Vars:
     TextView questionText;
     Button[] buttons =  new Button[4];
@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     Typeface droidSansArmenian;
     Typeface sylfaen;
     Typeface mainFont;
-    Toolbar toolbar;
 
 
     @Override
@@ -34,21 +33,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
         droidSansArmenian = Typeface.createFromAsset(getAssets(), "fonts/DroidSansArmenian.ttf");
         sylfaen = Typeface.createFromAsset(getAssets(), "fonts/Sylfaen.ttf");
-        mainFont = droidSansArmenian;
+        mainFont = sylfaen;
 
         init();
     }
 
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_settings, menu);
-        return true;
-    }
-
     public void init() {
-        setContentView(R.layout.activity_main);
-
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_quiz);
 
         // Question Section
         questionText = (TextView) findViewById(R.id.textQuestion);
