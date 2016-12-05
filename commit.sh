@@ -4,7 +4,6 @@
 # Plathform: Git
 #
 # Author: Dmitry Ivanov
-#
 
 if [ ! "$1" ]; then
   echo "You should enter commit message:"
