@@ -3,13 +3,23 @@
     <dimen name="activity_horizontal_margin">0dp</dimen>
     <dimen name="activity_vertical_margin">0dp</dimen>
 
+    <!-- Menu -->
     <dimen name="menuEntryText">36sp</dimen>
 
+    <!-- Alphabet -->
+    <dimen name="textAlphabetDesc">40sp</dimen>
+    <dimen name="textAlphabetBody">40sp</dimen>
+    <dimen name="textAlphabetButton">40sp</dimen>
+    <dimen name="textAlphabetButtonListenHeight">80sp</dimen>
+    <dimen name="descTextWidth">0dp</dimen>
+
+    <!-- Quiz -->
     <dimen name="textQuestion">120sp</dimen>
     <dimen name="textAnswer">40sp</dimen>
     <dimen name="textResult">40sp</dimen>
 
-    <dimen name="textAbout">20sp</dimen>
+    <!-- About -->
+    <dimen name="textAbout">18sp</dimen>
 
 
 </resources>

@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class MainMenu extends AppCompatActivity {
     // Vars:
-    Button[] buttons =  new Button[4];
+    Button[] buttons =  new Button[3];
     Typeface droidSansArmenian;
     Typeface sylfaen;
     Typeface mainFont;
@@ -26,9 +26,9 @@ public class MainMenu extends AppCompatActivity {
         // Answer Section
         buttons[0] = (Button) findViewById(R.id.menuEntry1);
         buttons[1] = (Button) findViewById(R.id.menuEntry2);
-        buttons[2] = (Button) findViewById(R.id.menuEntry3);
-        buttons[3] = (Button) findViewById(R.id.menuEntry4);
-        buttons[3] = (Button) findViewById(R.id.menuEntry5);
+        /*buttons[2] = (Button) findViewById(R.id.menuEntry3);*/
+        /*buttons[2] = (Button) findViewById(R.id.menuEntry4);*/
+        buttons[2] = (Button) findViewById(R.id.menuEntry5);
 
         // Init Buttons:
         for (Button i: buttons) {

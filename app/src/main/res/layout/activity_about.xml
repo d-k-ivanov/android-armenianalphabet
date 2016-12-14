@@ -19,7 +19,6 @@
 
     <TextView
         android:id="@+id/aboutText"
-        android:layout_margin="10dp"
         android:text="@string/aboutText"
         android:layout_width="match_parent"
         android:layout_gravity="bottom"
@@ -32,6 +31,8 @@
         android:text="@string/aboutCopyright"
         android:gravity="bottom|center_horizontal"
         android:layout_gravity="bottom"
+        android:autoLink="web"
+        android:lines="2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

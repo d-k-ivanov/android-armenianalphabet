@@ -22,7 +22,7 @@
         parent="ThemeOverlay.AppCompat.Light"/>
 
     <!-- Menu -->
-    <style name="menuEntry" parent="answerSection">
+    <style name="menuEntry" parent="AppTheme">
         <item name="android:layout_margin">5dp</item>
         <item name="android:background">@drawable/button</item>
         <item name="android:textColor">@color/defaultButtonText</item>
@@ -31,6 +31,39 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height"> wrap_content</item>
         <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- Alphabet -->
+    <style name="alphabetParent">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:textColor">@color/blackText</item>
+    </style>
+
+    <style name="alphabetDescription" parent="alphabetParent">
+        <item name="android:textSize">@dimen/textAlphabetDesc</item>
+        <item name="android:layout_weight">0.4</item>
+    </style>
+    <style name="alphabetLetter" parent="alphabetParent">
+        <item name="android:textSize">@dimen/textAlphabetBody</item>
+        <item name="android:layout_weight">0.6</item>
+        <item name="android:layout_gravity">fill_horizontal</item>
+    </style>
+    <style name="alphabetButton" parent="alphabetParent">
+        <item name="android:textColor">@color/defaultButtonText</item>
+        <item name="android:textSize">@dimen/textAlphabetButton</item>
+        <item name="android:background">@drawable/button</item>
+    </style>
+    <style name="alphabetListenButton" parent="alphabetButton">
+        <item name="android:layout_margin">10dp</item>
+    </style>
+    <style name="alphabetNextButton" parent="alphabetButton">
+        <item name="android:layout_weight">0.5</item>
+    </style>
+    <style name="alphabetPrevButton" parent="alphabetButton">
+        <item name="android:layout_weight">0.5</item>
     </style>
 
 
