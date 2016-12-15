@@ -1,5 +1,11 @@
 package com.pupupon.armenianalphabet;
 
+import android.content.Context;
+import android.content.res.AssetFileDescriptor;
+import android.media.MediaPlayer;
+import android.os.Handler;
+
+import java.io.IOException;
 import java.util.Random;
 
 class Tools {
@@ -66,6 +72,41 @@ class Tools {
         letters[2] = "letter" + c;
         letters[3] = "letter" + d;
         return letters;
+    }
+
+    public static void playSound(Context context, int resource){
+        final MediaPlayer m = MediaPlayer.create(context, resource);
+        m.start();
+        Handler handler1 = new Handler();
+        handler1.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                m.release();
+            }
+        }, 1000);
+
+    }
+
+    public static void playSoundFromAsset(Context context, String fullPath){
+        final MediaPlayer m = new MediaPlayer();
+        try {
+            AssetFileDescriptor descriptor = context.getAssets().openFd(fullPath);
+            m.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
+            descriptor.close();
+            m.prepare();
+            m.start();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Handler handler1 = new Handler();
+        handler1.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                m.release();
+            }
+        }, 1000);
     }
 
 }

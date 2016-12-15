@@ -16,12 +16,12 @@
     <string name="menuEntry5">О программе</string>
 
     <!-- Alphabet -->
-    <string name="alphabetUpper">Большая:</string>
-    <string name="alphabetLower">Маленькая:</string>
+    <string name="alphabetUpper">Бол.:</string>
+    <string name="alphabetLower">Мал.:</string>
     <string name="alphabetPronounce">Звук:</string>
     <string name="alphabetButtonListen">Послушать</string>
     <string name="alphabetButtonPrevious">Назад</string>
-    <string name="alphabetButtonNext">Вперед</string>
+    <string name="alphabetButtonNext">Далее</string>
 
     <!-- About -->
     <string name="aboutText">

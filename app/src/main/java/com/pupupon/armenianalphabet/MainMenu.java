@@ -11,17 +11,14 @@ import android.widget.Button;
 public class MainMenu extends AppCompatActivity {
     // Vars:
     Button[] buttons =  new Button[3];
-    Typeface droidSansArmenian;
-    Typeface sylfaen;
-    Typeface mainFont;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-        droidSansArmenian = Typeface.createFromAsset(getAssets(), "fonts/DroidSansArmenian.ttf");
-        sylfaen = Typeface.createFromAsset(getAssets(), "fonts/Sylfaen.ttf");
-        mainFont = droidSansArmenian;
+        Typeface droidSansArmenian = Typeface.createFromAsset(getAssets(), "fonts/DroidSansArmenian.ttf");
+        Typeface sylfaen = Typeface.createFromAsset(getAssets(), "fonts/Sylfaen.ttf");
+        Typeface mainFont = sylfaen;
 
         // Answer Section
         buttons[0] = (Button) findViewById(R.id.menuEntry1);
@@ -47,7 +44,7 @@ public class MainMenu extends AppCompatActivity {
         startActivity(quiz);
     }
 
-    public void startMenuEntry3(View view) {
+    /*public void startMenuEntry3(View view) {
         Intent settings = new Intent(this, SettingsActivity.class);
         startActivity(settings);
     }
@@ -55,7 +52,7 @@ public class MainMenu extends AppCompatActivity {
     public void startMenuEntry4(View view) {
         Intent help = new Intent(this, HelpActivity.class);
         startActivity(help);
-    }
+    }*/
 
     public void startMenuEntry5(View view) {
         Intent about = new Intent(this, AboutActivity.class);

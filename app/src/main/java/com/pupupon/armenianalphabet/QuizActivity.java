@@ -5,8 +5,6 @@ import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.TextViewCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
@@ -17,23 +15,19 @@ import android.widget.TextView;
 import android.os.Bundle;
 
 public class QuizActivity extends AppCompatActivity implements OnClickListener, OnLongClickListener {
-    // Vars:
-    TextView questionText;
-    Button[] buttons =  new Button[4];
-    TextView resultText;
-    Question q;
-    Typeface droidSansArmenian;
-    Typeface sylfaen;
-    Typeface mainFont;
+    private Button[] buttons =  new Button[4];
+    private TextView resultText;
+    private Question q;
+    private Typeface mainFont;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        droidSansArmenian = Typeface.createFromAsset(getAssets(), "fonts/DroidSansArmenian.ttf");
-        sylfaen = Typeface.createFromAsset(getAssets(), "fonts/Sylfaen.ttf");
-        mainFont = droidSansArmenian;
+        Typeface droidSansArmenian = Typeface.createFromAsset(getAssets(), "fonts/DroidSansArmenian.ttf");
+        Typeface sylfaen = Typeface.createFromAsset(getAssets(), "fonts/Sylfaen.ttf");
+        mainFont = sylfaen;
 
         init();
     }
@@ -42,7 +36,7 @@ public class QuizActivity extends AppCompatActivity implements OnClickListener, 
         setContentView(R.layout.activity_quiz);
 
         // Question Section
-        questionText = (TextView) findViewById(R.id.textQuestion);
+        TextView questionText = (TextView) findViewById(R.id.textQuestion);
         questionText.setOnLongClickListener(this);
         questionText.setTypeface(mainFont);
 
