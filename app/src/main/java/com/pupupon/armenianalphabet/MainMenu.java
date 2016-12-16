@@ -18,7 +18,7 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
         Typeface droidSansArmenian = Typeface.createFromAsset(getAssets(), "fonts/DroidSansArmenian.ttf");
         Typeface sylfaen = Typeface.createFromAsset(getAssets(), "fonts/Sylfaen.ttf");
-        Typeface mainFont = sylfaen;
+        Typeface mainFont = droidSansArmenian;
 
         // Answer Section
         buttons[0] = (Button) findViewById(R.id.menuEntry1);

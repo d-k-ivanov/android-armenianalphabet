@@ -13,7 +13,7 @@ public class AboutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_about);
         Typeface droidSansArmenian = Typeface.createFromAsset(getAssets(), "fonts/DroidSansArmenian.ttf");
         Typeface sylfaen = Typeface.createFromAsset(getAssets(), "fonts/Sylfaen.ttf");
-        Typeface mainFont = sylfaen;
+        Typeface mainFont = droidSansArmenian;
 
         TextView aboutText = (TextView) findViewById(R.id.aboutText);
         TextView aboutCopyright = (TextView) findViewById(R.id.aboutCopyright);

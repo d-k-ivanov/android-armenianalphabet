@@ -27,7 +27,7 @@ public class AlphabetActivity extends AppCompatActivity implements OnClickListen
 
         Typeface droidSansArmenian = Typeface.createFromAsset(getAssets(), "fonts/DroidSansArmenian.ttf");
         Typeface sylfaen = Typeface.createFromAsset(getAssets(), "fonts/Sylfaen.ttf");
-        Typeface mainFont = sylfaen;
+        Typeface mainFont = droidSansArmenian;
 
         for(int i=1; i <= 39; i++){
             letters[i-1] = "letter" + i;
