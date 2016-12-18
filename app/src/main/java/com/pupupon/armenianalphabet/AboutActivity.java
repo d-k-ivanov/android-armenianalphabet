@@ -11,9 +11,8 @@ public class AboutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-        Typeface droidSansArmenian = Typeface.createFromAsset(getAssets(), "fonts/DroidSansArmenian.ttf");
-        Typeface sylfaen = Typeface.createFromAsset(getAssets(), "fonts/Sylfaen.ttf");
-        Typeface mainFont = droidSansArmenian;
+
+        Typeface mainFont = Tools.setFont(this);
 
         TextView aboutText = (TextView) findViewById(R.id.aboutText);
         TextView aboutCopyright = (TextView) findViewById(R.id.aboutCopyright);

@@ -1,6 +1,7 @@
 package com.pupupon.armenianalphabet;
 
 import android.graphics.Typeface;
+import android.media.AudioManager;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,10 +25,9 @@ public class AlphabetActivity extends AppCompatActivity implements OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alphabet);
+        this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
-        Typeface droidSansArmenian = Typeface.createFromAsset(getAssets(), "fonts/DroidSansArmenian.ttf");
-        Typeface sylfaen = Typeface.createFromAsset(getAssets(), "fonts/Sylfaen.ttf");
-        Typeface mainFont = droidSansArmenian;
+        Typeface mainFont = Tools.setFont(this);
 
         for(int i=1; i <= 39; i++){
             letters[i-1] = "letter" + i;

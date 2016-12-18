@@ -2,6 +2,12 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
+        config {
+            keyAlias 'DmitryIvanovPupupon'
+            keyPassword 'tNMa89Es0m3i10h'
+            storeFile file('/home/flash/Dropbox/Personal/Keystores/DmitryIvanovPupupon.jks')
+            storePassword 'tNMa89Es0m3i10h'
+        }
     }
     compileSdkVersion 25
     buildToolsVersion '25.0.0'

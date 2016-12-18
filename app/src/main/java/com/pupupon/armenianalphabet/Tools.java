@@ -2,6 +2,7 @@ package com.pupupon.armenianalphabet;
 
 import android.content.Context;
 import android.content.res.AssetFileDescriptor;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Handler;
 
@@ -107,6 +108,14 @@ class Tools {
                 m.release();
             }
         }, 1000);
+    }
+
+    public static Typeface setFont(Context context){
+        Typeface droidSansArmenian = Typeface.createFromAsset(context.getAssets(), "fonts/DroidSansArmenian.ttf");
+        Typeface sylfaen = Typeface.createFromAsset(context.getAssets(), "fonts/Sylfaen.ttf");
+
+        return sylfaen;
+
     }
 
 }
