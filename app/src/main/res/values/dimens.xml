@@ -7,7 +7,7 @@
     <dimen name="menuEntryText">36sp</dimen>
 
     <!-- Alphabet -->
-    <dimen name="textAlphabetDesc">40sp</dimen>
+    <dimen name="textAlphabetDesc">20sp</dimen>
     <dimen name="textAlphabetBody">40sp</dimen>
     <dimen name="textAlphabetButton">40sp</dimen>
     <dimen name="textAlphabetButtonListenHeight">80sp</dimen>
