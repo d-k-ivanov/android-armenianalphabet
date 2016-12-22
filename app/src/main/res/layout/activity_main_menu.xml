@@ -35,6 +35,15 @@
             android:id="@+id/menuEntry5"
             android:onClick="startMenuEntry5"
             style="@style/menuEntry" />
+        <TextView
+            android:id="@+id/aboutCopyright"
+            android:text="@string/aboutCopyright"
+            android:gravity="bottom|center_horizontal"
+            android:layout_gravity="bottom"
+            android:autoLink="web"
+            android:lines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         </LinearLayout>
 </RelativeLayout>

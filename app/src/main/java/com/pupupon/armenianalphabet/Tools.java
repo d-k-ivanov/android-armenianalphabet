@@ -22,7 +22,7 @@ class Tools {
      * @return Integer between min and max, inclusive.
      * @see java.util.Random#nextInt(int)
      */
-    public static int randInt(int min, int max, int[] exclude) {
+    static int randInt(int min, int max, int[] exclude) {
         Random rand = new Random();
 
         // nextInt is normally exclusive of the top value,
@@ -58,7 +58,7 @@ class Tools {
         return randomNum;
     }*/
 
-    public static String[] randLetters(int min, int max) {
+    static String[] randLetters(int min, int max) {
         String[] letters = {"","","",""};
         int[] exclude = {-1,-1,-1};
         int a = randInt(min,max, exclude);
@@ -75,7 +75,7 @@ class Tools {
         return letters;
     }
 
-    public static void playSound(Context context, int resource){
+    static void playSound(Context context, int resource){
         final MediaPlayer m = MediaPlayer.create(context, resource);
         m.start();
         Handler handler1 = new Handler();
@@ -110,7 +110,7 @@ class Tools {
         }, 1000);
     }
 
-    public static Typeface setFont(Context context){
+    static Typeface setFont(Context context){
         Typeface droidSansArmenian = Typeface.createFromAsset(context.getAssets(), "fonts/DroidSansArmenian.ttf");
         Typeface sylfaen = Typeface.createFromAsset(context.getAssets(), "fonts/Sylfaen.ttf");
 

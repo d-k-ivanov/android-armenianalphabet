@@ -37,7 +37,7 @@ class Question {
 
 
     boolean checkQuestion(String s) {
-        return s == answer;
+        return s.equals(answer);
     }
 
     void initQuestion(  TextView questionText,Button[] buttons) {
