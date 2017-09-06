@@ -41,10 +41,26 @@ proguard/
 
 # Intellij| .idea - for all Android Studio environment
 *.iml
-.idea
-#.idea/workspace.xml
-#.idea/tasks.xml
-#.idea/libraries
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/dictionaries
+.idea/librarie
+
+# Mongo Explorer plugin:
+.idea/**/mongoSettings.xml
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+## File-based project format:
+*.iws
 
 # Keystore files
 *.jks
@@ -52,8 +68,19 @@ proguard/
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
 
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Freeline
+freeline.py
+freeline/
+freeline_project_description.json
+
 # NDK
 obj/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
 
 # MacOS
 .DS_Store
@@ -69,7 +96,6 @@ Thumbs.db
 /*/out
 /*/*/build
 /*/*/production
-*.iws
 *.ipr
 *~
 *.swp
