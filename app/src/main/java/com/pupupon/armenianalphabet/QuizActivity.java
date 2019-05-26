@@ -2,9 +2,10 @@ package com.pupupon.armenianalphabet;
 
 import android.graphics.Typeface;
 import android.os.Handler;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.widget.TextViewCompat;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.widget.TextViewCompat;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
