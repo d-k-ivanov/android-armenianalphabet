@@ -59,6 +59,7 @@ class Tools {
     }*/
 
 	static String[] randLetters(int min, int max) {
+		final String letter = getFileResourceName();
 		String[] letters = {"","","",""};
 		int[] exclude = {-1,-1,-1};
 		int a = randInt(min,max, exclude);
@@ -68,11 +69,15 @@ class Tools {
 		int c = randInt(min,max, exclude);
 		exclude[2] = c;
 		int d = randInt(min,max, exclude);
-		letters[0] = "letter" + a;
-		letters[1] = "letter" + b;
-		letters[2] = "letter" + c;
-		letters[3] = "letter" + d;
+		letters[0] = letter + a;
+		letters[1] = letter + b;
+		letters[2] = letter + c;
+		letters[3] = letter + d;
 		return letters;
+	}
+
+	static String getFileResourceName() {
+		return (Storage.getEasternArmenian() ? "" : "w") + "letter";
 	}
 
 	static void playSound(Context context, int resource){
