@@ -34,5 +34,9 @@
         https://d-k-ivanov.github.io/
     </string>
 
+		<string name="easternPronunciation">Восточное произношение</string>
+		<string name="westernPronunciation">Западное произношение</string>
+		<string name="enabled">\u0020включен</string>
+
 
 </resources>

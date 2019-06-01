@@ -2,15 +2,19 @@ package com.pupupon.armenianalphabet;
 
 import android.content.Intent;
 import android.graphics.Typeface;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.snackbar.Snackbar;
 
 
 public class MainMenu extends AppCompatActivity {
 	// Vars:
-	Button[] buttons =  new Button[3];
+	Button[] buttons = new Button[4];
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,14 +25,17 @@ public class MainMenu extends AppCompatActivity {
 		// Answer Section
 		buttons[0] = (Button) findViewById(R.id.menuEntry1);
 		buttons[1] = (Button) findViewById(R.id.menuEntry2);
-		/*buttons[2] = (Button) findViewById(R.id.menuEntry3);*/
+		buttons[2] = (Button) findViewById(R.id.menuEntry3);
 		/*buttons[2] = (Button) findViewById(R.id.menuEntry4);*/
-		buttons[2] = (Button) findViewById(R.id.menuEntry5);
+		buttons[3] = (Button) findViewById(R.id.menuEntry5);
 
 		// Init Buttons:
-		for (Button i: buttons) {
+		for (Button i : buttons) {
 			i.setTypeface(mainFont);
 		}
+
+		Storage.init(getApplicationContext());
+		buttons[2].setText(getPronunciationIndication());
 
 	}
 
@@ -42,12 +49,15 @@ public class MainMenu extends AppCompatActivity {
 		startActivity(quiz);
 	}
 
-    /*public void startMenuEntry3(View view) {
-        Intent settings = new Intent(this, SettingsActivity.class);
-        startActivity(settings);
-    }
+	public void startMenuEntry3(View view) {
+		Snackbar.make(findViewById(R.id.activity_main_menu),
+			getString(getPronunciationIndication()) + getString(R.string.enabled),
+			Snackbar.LENGTH_SHORT).show();
+		Storage.setEasternArmenian(!Storage.getEasternArmenian());
+		buttons[2].setText(getPronunciationIndication());
+	}
 
-    public void startMenuEntry4(View view) {
+	/*public void startMenuEntry4(View view) {
         Intent help = new Intent(this, HelpActivity.class);
         startActivity(help);
     }*/
@@ -55,5 +65,9 @@ public class MainMenu extends AppCompatActivity {
 	public void startMenuEntry5(View view) {
 		Intent about = new Intent(this, AboutActivity.class);
 		startActivity(about);
+	}
+
+	private int getPronunciationIndication() {
+		return Storage.getEasternArmenian() ? R.string.westernPronunciation : R.string.easternPronunciation;
 	}
 }

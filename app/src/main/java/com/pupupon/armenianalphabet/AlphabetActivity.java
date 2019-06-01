@@ -2,22 +2,30 @@ package com.pupupon.armenianalphabet;
 
 import android.graphics.Typeface;
 import android.media.AudioManager;
-import android.os.Handler;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 public class AlphabetActivity extends AppCompatActivity implements OnClickListener {
+	int globalPosition;
+	boolean easternArmenian = true;
 	// Vars:
 	private TextView upperCaseText;
 	private TextView lowerCaseText;
 	private TextView soundText;
 	private Button[] buttons = new Button[3];
 	private String[] letters = new String[39];
-	int globalPosition;
+	private Menu mMenu;
+	private TextView alphabetTitle;
 
 
 	@Override
@@ -28,35 +36,30 @@ public class AlphabetActivity extends AppCompatActivity implements OnClickListen
 
 		Typeface mainFont = Tools.setFont(this);
 
-		for(int i=1; i <= 39; i++){
-			letters[i-1] = "letter" + i;
-		}
-
-		upperCaseText = (TextView) findViewById(R.id.alphabetUpperCase);
+		upperCaseText = findViewById(R.id.alphabetUpperCase);
 		upperCaseText.setTypeface(mainFont);
-		lowerCaseText = (TextView) findViewById(R.id.alphabetLowerCase);
+		lowerCaseText = findViewById(R.id.alphabetLowerCase);
 		lowerCaseText.setTypeface(mainFont);
-		soundText = (TextView) findViewById(R.id.alphabetIPA);
+		soundText = findViewById(R.id.alphabetIPA);
 		soundText.setTypeface(mainFont);
-		buttons[0] = (Button) findViewById(R.id.alphabetListen);
-		buttons[1] = (Button) findViewById(R.id.alphabetPrevious);
-		buttons[2] = (Button) findViewById(R.id.alphabetNext);
 
-		for (Button i: buttons) {
+		globalPosition = 0;
+		setLetterArrayValue();
+
+		buttons[0] = findViewById(R.id.alphabetListen);
+		buttons[1] = findViewById(R.id.alphabetPrevious);
+		buttons[2] = findViewById(R.id.alphabetNext);
+
+		for (Button i : buttons) {
 			i.setOnClickListener(this);
 			i.setTypeface(mainFont);
 		}
-
-		globalPosition = 0;
-
-		setup();
-
 	}
 
 	@Override
 	public void onClick(final View view) {
 
-		switch(view.getId()){
+		switch (view.getId()) {
 			case R.id.alphabetListen:
 				view.setBackgroundResource(R.drawable.button_green);
 				view.setEnabled(false);
@@ -101,4 +104,10 @@ public class AlphabetActivity extends AppCompatActivity implements OnClickListen
 		soundText.setText(letter[2]);
 	}
 
+	private void setLetterArrayValue() {
+		for (int i = 1; i <= 39; i++) {
+			letters[i - 1] = Tools.getFileResourceName() + i;
+		}
+		setup();
+	}
 }

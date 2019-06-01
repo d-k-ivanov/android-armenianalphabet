@@ -1,7 +1,7 @@
 <resources>
     <!-- Activities -->
     <string name="app_name">Armenian Alphabet</string>
-    <string name="alphabet_title">Armenian Alphabet</string>
+    <string name="alphabet_title">Armenian Alphabet :</string>
     <string name="quiz_title">Armenian Alphabet: Quiz</string>
     <string name="settings_title">Armenian Alphabet: Settings</string>
     <string name="help_title">Armenian Alphabet: Help</string>
@@ -30,7 +30,7 @@
     <string name="answer4" translatable="false">ANS</string>
     <string name="result" translatable="false">RESULT</string>
 
-    <!-- Letters -->
+    <!-- Letters eastern armenian-->
     <string name="letter1" translatable="false">Ա;ա;a[ɑ]</string>
     <string name="letter2" translatable="false">Բ;բ;b[b]</string>
     <string name="letter3" translatable="false">Գ;գ;g[g]</string>
@@ -70,6 +70,46 @@
     <string name="letter37" translatable="false">և;և;ew ev[jɛv]</string>
     <string name="letter38" translatable="false">Օ;օ;ô[o]</string>
     <string name="letter39" translatable="false">Ֆ;ֆ;f[f]</string>
+	<!-- Letters western armenian-->
+		<string name="wletter1" translatable="false">Ա;ա;a[ɑ]</string>
+		<string name="wletter2" translatable="false">Բ;բ;p[p]</string>
+		<string name="wletter3" translatable="false">Գ;գ;k[k]</string>
+		<string name="wletter4" translatable="false">Դ;դ;t[t]</string>
+		<string name="wletter5" translatable="false">Ե;ե;e[jɛ]</string>
+		<string name="wletter6" translatable="false">Զ;զ;z[z]</string>
+		<string name="wletter7" translatable="false">Է;է;ē[ɛ]</string>
+		<string name="wletter8" translatable="false">Ը;ը;ə[ə]</string>
+		<string name="wletter9" translatable="false">Թ;թ;t‘[tʰ]</string>
+		<string name="wletter10" translatable="false">Ժ;ժ;zh ž[ʒ]</string>
+		<string name="wletter11" translatable="false">Ի;ի;i[i]</string>
+		<string name="wletter12" translatable="false">Լ;լ;l[l]</string>
+		<string name="wletter13" translatable="false">Խ;խ;kh x[χ]</string>
+		<string name="wletter14" translatable="false">Ծ;ծ;dz[dz]</string>
+		<string name="wletter15" translatable="false">Կ;կ;g[g]</string>
+		<string name="wletter16" translatable="false">Հ;հ;oh[oh]</string>
+		<string name="wletter17" translatable="false">Ձ;ձ;ts[ts]</string>
+		<string name="wletter18" translatable="false">Ղ;ղ;gh ł[ʁ]</string>
+		<string name="wletter19" translatable="false">Ճ;ճ;dj [dj]</string>
+		<string name="wletter20" translatable="false">Մ;մ;m[m]</string>
+		<string name="wletter21" translatable="false">Յ;յ;y[j]</string>
+		<string name="wletter22" translatable="false">Ն;ն;n[n]</string>
+		<string name="wletter23" translatable="false">Շ;շ;sh š[ʃ]</string>
+		<string name="wletter24" translatable="false">Ո;ո;vo[vɔ]</string>
+		<string name="wletter25" translatable="false">Չ;չ;tsh č‘[t͡ʃʰ]</string>
+		<string name="wletter26" translatable="false">Պ;պ;b[b]</string>
+		<string name="wletter27" translatable="false">Ջ;ջ;t ch [tch]</string>
+		<string name="wletter28" translatable="false">Ռ;ռ;r̄[r]</string>
+		<string name="wletter29" translatable="false">Ս;ս;s[s]</string>
+		<string name="wletter30" translatable="false">Վ;վ;v[v]</string>
+		<string name="wletter31" translatable="false">Տ;տ;d[d]</string>
+		<string name="wletter32" translatable="false">Ր;ր;re r[ɾ]</string>
+		<string name="wletter33" translatable="false">Ց;ց;t͡sʰ c‘[t͡sʰ]</string>
+		<string name="wletter34" translatable="false">Ւ;ւ;ve w[w]</string>
+		<string name="wletter35" translatable="false">Փ;փ;ph p‘[pʰ]</string>
+		<string name="wletter36" translatable="false">Ք;ք;k‘[kʰ]</string>
+		<string name="wletter37" translatable="false">և;և;ew ev[jɛv]</string>
+		<string name="wletter38" translatable="false">Օ;օ;ô[o]</string>
+		<string name="wletter39" translatable="false">Ֆ;ֆ;f[f]</string>
 
     <!-- About -->
     <string name="aboutText">
@@ -81,6 +121,10 @@
         Copyright © 2016-2019 Dmitriy Ivanov \n
         https://d-k-ivanov.github.io/
     </string>
+
+		<string name="easternPronunciation">Eastern pronunciation</string>
+		<string name="westernPronunciation">Western pronunciation</string>
+		<string name="enabled">\u0020enabled</string>
 
 
 </resources>
