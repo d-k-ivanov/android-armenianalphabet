@@ -114,6 +114,6 @@ class Tools {
         Typeface droidSansArmenian = Typeface.createFromAsset(context.getAssets(), "fonts/DroidSansArmenian.ttf");
         Typeface sylfaen = Typeface.createFromAsset(context.getAssets(), "fonts/Sylfaen.ttf");
 
-        return droidSansArmenian;
+        return sylfaen;
     }
 }
