@@ -36,6 +36,7 @@ public class MainMenu extends AppCompatActivity {
 
         Storage.init(getApplicationContext());
         buttons[2].setText(getPronunciationIndication());
+        setTittle();
 
     }
 
@@ -51,10 +52,12 @@ public class MainMenu extends AppCompatActivity {
 
     public void startMenuEntry3(View view) {
         Snackbar.make(findViewById(R.id.activity_main_menu),
-            getString(getPronunciationIndication()) + getString(R.string.enabled),
+            getString(getArmenianIndication()) + getString(R.string.enabled),
             Snackbar.LENGTH_SHORT).show();
         Storage.setEasternArmenian(!Storage.getEasternArmenian());
         buttons[2].setText(getPronunciationIndication());
+        setTittle();
+
     }
 
     /*public void startMenuEntry4(View view) {
@@ -69,5 +72,14 @@ public class MainMenu extends AppCompatActivity {
 
     private int getPronunciationIndication() {
         return Storage.getEasternArmenian() ? R.string.westernPronunciation : R.string.easternPronunciation;
+    }
+
+    private int getArmenianIndication() {
+        return Storage.getEasternArmenian() ? R.string.western : R.string.eastern;
+    }
+
+    private void setTittle() {
+        String armPrefix = (Storage.getEasternArmenian() ? getString(R.string.eastern) : getString(R.string.western)) + " ";
+        this.getSupportActionBar().setTitle(armPrefix + getString(R.string.app_name));
     }
 }

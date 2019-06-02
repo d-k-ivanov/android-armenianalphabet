@@ -129,7 +129,7 @@
     <!-- Western/Eastern switch -->
     <string name="eastern">Eastern</string>
     <string name="western">Western</string>
-    <string name="easternPronunciation">Eastern pronunciation</string>
-    <string name="westernPronunciation">Western pronunciation</string>
-    <string name="enabled">\u0020enabled</string>
+    <string name="easternPronunciation">Switch to Eastern</string>
+    <string name="westernPronunciation">Switch to Western</string>
+    <string name="enabled">\u0020armenian\u0020enabled</string>
 </resources>

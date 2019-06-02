@@ -41,7 +41,7 @@
     <!-- Western/Eastern switch -->
     <string name="eastern">Восточный</string>
     <string name="western">Западный</string>
-    <string name="easternPronunciation">Восточное произношение</string>
-    <string name="westernPronunciation">Западное произношение</string>
-    <string name="enabled">\u0020включен</string>
+    <string name="easternPronunciation">Переключить на Восточный</string>
+    <string name="westernPronunciation">Переключить на Западный</string>
+    <string name="enabled">\u0020армянский\u0020включен</string>
 </resources>

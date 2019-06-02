@@ -25,6 +25,7 @@ public class QuizActivity extends AppCompatActivity implements OnClickListener, 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mainFont = Tools.setFont(this);
+        setTittle();
 
         init();
     }
@@ -130,5 +131,10 @@ public class QuizActivity extends AppCompatActivity implements OnClickListener, 
     public boolean onLongClick(View view) {
         init();
         return false;
+    }
+
+    private void setTittle() {
+        String armPrefix = (Storage.getEasternArmenian() ? getString(R.string.eastern) : getString(R.string.western)) + " ";
+        this.getSupportActionBar().setTitle(armPrefix + getString(R.string.quiz_title));
     }
 }
