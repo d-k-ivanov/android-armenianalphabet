@@ -36,6 +36,4 @@
     <color name="resultDefaultText">#ffffff</color>
     <color name="resultCorrectText">#689f38</color>
     <color name="resultIncorrectText">#d50000</color>
-
-
 </resources>

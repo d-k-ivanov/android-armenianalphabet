@@ -1,16 +1,42 @@
 root = true
 
-[*]
-indent_style = tab
-indent_size = 2
-end_of_line = lf
+[**]
 charset = utf-8
-trim_trailing_whitespace = true
+end_of_line = lf
+indent_size = 4
+indent_style = space
 insert_final_newline = true
+trim_trailing_whitespace = true
 
-[{LICENSE,.gitattributes,.gitignore}]
-indent_style = space
+[{*.bash,*.sh,bashrc,bash_profile,profile}]
+max_line_length = 80
 
-[*.{json,yml,md}]
-indent_style = space
+[*.csv]
+insert_final_newline = false
+
+[*.ftl]
+max_line_length = 80
+
+[*.gitmodules]
+insert_final_newline = false
+
+[*.js]
+max_line_length = 80
+
+[*.java]
+max_line_length = 100
+
+[Makefile]
+indent_style = tab
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.py]
+max_line_length = 80
+
+[*.ts]
+max_line_length = 80
+
+[{*.yml,*.yaml}]
 indent_size = 2

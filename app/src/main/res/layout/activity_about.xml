@@ -5,7 +5,6 @@
     tools:context="com.pupupon.armenianalphabet.AboutActivity"
     style="@style/AppTheme" >
 
-
     <ImageView
         android:id="@+id/logoImage"
         android:src="@mipmap/ic512"
@@ -35,6 +34,4 @@
         android:lines="2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
-
 </LinearLayout>

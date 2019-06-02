@@ -81,8 +81,5 @@
             android:text="@string/alphabetButtonNext"
             android:id="@+id/alphabetNext"
             style="@style/alphabetNextButton" />
-
     </LinearLayout>
-
-
 </LinearLayout>

@@ -1,5 +1,4 @@
 <resources>
-
     <!-- Base application theme -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here -->
@@ -11,6 +10,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
     </style>
+
     <!-- Custom toolbar here -->
     <style name="AppTheme.NoActionBar" parent="AppTheme">
         <item name="windowActionBar">false</item>
@@ -42,7 +42,6 @@
         <item name="android:textColor">@color/blackText</item>
         <item name="android:layout_gravity">center</item>
     </style>
-
     <style name="alphabetDescription" parent="alphabetParent">
         <item name="android:textSize">@dimen/textAlphabetDesc</item>
         <item name="android:layout_weight">0.4</item>
@@ -68,7 +67,6 @@
         <item name="android:layout_weight">0.5</item>
     </style>
 
-
     <!-- Quiz -->
     <style name="questionSection" parent="AppTheme">
         <item name="android:gravity">center_vertical|center_horizontal</item>
@@ -79,7 +77,6 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-
     <style name="answerSection" parent="AppTheme">
         <item name="android:orientation">horizontal</item>
         <item name="android:layout_weight">1</item>
@@ -104,7 +101,6 @@
         <item name="android:background">@drawable/button_red</item>
         <item name="android:textColor">@color/redButtonText</item>
     </style>
-
     <style name="resultSection" parent="AppTheme">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -125,5 +121,4 @@
     <style name="resultSectionIncorrect" parent="resultSection">
         <item name="android:textColor">@color/resultIncorrectText</item>
     </style>
-
 </resources>
