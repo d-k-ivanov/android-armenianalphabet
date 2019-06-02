@@ -96,7 +96,8 @@ public class AlphabetActivity extends AppCompatActivity implements OnClickListen
     }
 
     private void setup(){
-        this.getSupportActionBar().setTitle(getString(R.string.app_name) + ": " + (globalPosition+1)+ " of 39");
+        String armPrefix = (Storage.getEasternArmenian() ? R.string.western : R.string.eastern) + " ";
+        this.getSupportActionBar().setTitle(armPrefix + getString(R.string.app_name) + ": " + (globalPosition+1)+ " of 39");
         String[] letter = ((String) getResources().getText(getResources().getIdentifier(letters[globalPosition], "string", "com.pupupon.armenianalphabet"))).split(";");
         upperCaseText.setText(letter[0]);
         lowerCaseText.setText(letter[1]);

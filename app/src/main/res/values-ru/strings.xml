@@ -11,7 +11,7 @@
     <!-- Menu -->
     <string name="menuEntry1">Алфавит</string>
     <string name="menuEntry2">Практика</string>
-    <string name="menuEntry3">Настройки</string>
+    <string name="menuEntry3">Переключатель произношения</string>
     <string name="menuEntry4">Помощь</string>
     <string name="menuEntry5">О программе</string>
 
@@ -39,6 +39,8 @@
     </string>
 
     <!-- Western/Eastern switch -->
+    <string name="eastern">Восточный</string>
+    <string name="western">Западный</string>
     <string name="easternPronunciation">Восточное произношение</string>
     <string name="westernPronunciation">Западное произношение</string>
     <string name="enabled">\u0020включен</string>
