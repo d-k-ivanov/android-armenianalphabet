@@ -4,28 +4,21 @@ import android.graphics.Typeface;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 public class AlphabetActivity extends AppCompatActivity implements OnClickListener {
     int globalPosition;
-    boolean easternArmenian = true;
     // Vars:
     private TextView upperCaseText;
     private TextView lowerCaseText;
     private TextView soundText;
     private Button[] buttons = new Button[3];
     private String[] letters = new String[39];
-    private Menu mMenu;
-    private TextView alphabetTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
