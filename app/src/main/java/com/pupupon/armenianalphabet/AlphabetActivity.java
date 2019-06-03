@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AlphabetActivity extends AppCompatActivity implements OnClickListener {
-    int globalPosition;
+    int globalPosition = 0;
     // Vars:
     private TextView upperCaseText;
     private TextView lowerCaseText;
@@ -24,28 +24,22 @@ public class AlphabetActivity extends AppCompatActivity implements OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alphabet);
-        this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
-
         Typeface mainFont = Tools.setFont(this);
-
         upperCaseText = findViewById(R.id.alphabetUpperCase);
         upperCaseText.setTypeface(mainFont);
         lowerCaseText = findViewById(R.id.alphabetLowerCase);
         lowerCaseText.setTypeface(mainFont);
         soundText = findViewById(R.id.alphabetIPA);
         soundText.setTypeface(mainFont);
-
-        globalPosition = 0;
         setLetterArrayValue();
-
         buttons[0] = findViewById(R.id.alphabetListen);
         buttons[1] = findViewById(R.id.alphabetPrevious);
         buttons[2] = findViewById(R.id.alphabetNext);
-
         for (Button i : buttons) {
             i.setOnClickListener(this);
             i.setTypeface(mainFont);
         }
+        this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
     }
 
     @Override
