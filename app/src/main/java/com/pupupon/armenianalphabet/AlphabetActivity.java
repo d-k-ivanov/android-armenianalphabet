@@ -51,13 +51,14 @@ public class AlphabetActivity extends AppCompatActivity implements OnClickListen
             case R.id.alphabetPrevious:
                 previousLetter();
                 setup();
+                listen();
                 break;
             case R.id.alphabetNext:
                 nextLetter();
                 setup();
+                listen();
                 break;
         }
-
     }
 
     private void setup(){
