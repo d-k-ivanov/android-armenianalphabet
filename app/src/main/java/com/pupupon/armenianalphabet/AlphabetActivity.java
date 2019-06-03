@@ -44,38 +44,16 @@ public class AlphabetActivity extends AppCompatActivity implements OnClickListen
 
     @Override
     public void onClick(final View view) {
-
         switch (view.getId()) {
             case R.id.alphabetListen:
-                view.setBackgroundResource(R.drawable.button_green);
-                view.setEnabled(false);
-
-                Tools.playSound(this, getResources().getIdentifier(letters[globalPosition], "raw", "com.pupupon.armenianalphabet"));
-                //Tools.playSoundFromAsset(this, "audio/" + letters[globalPosition] + ".ogg");
-
-                // Execute some code after 2 seconds have passed
-                Handler handler1 = new Handler();
-                handler1.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        view.setBackgroundResource(R.drawable.button);
-                        view.setEnabled(true);
-                    }
-                }, 1000);
-
+                listen();
                 break;
             case R.id.alphabetPrevious:
-                if (globalPosition == 0)
-                    globalPosition = 38;
-                else
-                    globalPosition--;
+                previousLetter();
                 setup();
                 break;
             case R.id.alphabetNext:
-                if (globalPosition == 38)
-                    globalPosition = 0;
-                else
-                    globalPosition++;
+                nextLetter();
                 setup();
                 break;
         }
@@ -96,5 +74,32 @@ public class AlphabetActivity extends AppCompatActivity implements OnClickListen
             letters[i - 1] = Tools.getFileResourceName() + i;
         }
         setup();
+    }
+
+    private void listen() {
+        final View view = buttons[0];
+        view.setBackgroundResource(R.drawable.button_green);
+        view.setEnabled(false);
+
+        Tools.playSound(this, getResources().getIdentifier(letters[globalPosition], "raw", "com.pupupon.armenianalphabet"));
+        //Tools.playSoundFromAsset(this, "audio/" + letters[globalPosition] + ".ogg");
+
+        // Execute some code after 2 seconds have passed
+        Handler handler1 = new Handler();
+        handler1.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                view.setBackgroundResource(R.drawable.button);
+                view.setEnabled(true);
+            }
+        }, 1000);
+    }
+
+    private void previousLetter() {
+        globalPosition = globalPosition == 0 ? 38 : globalPosition - 1;
+    }
+
+    private void nextLetter() {
+        globalPosition = globalPosition == 38 ? 0 : globalPosition + 1;
     }
 }
