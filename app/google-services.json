@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "619507729231",
+    "firebase_url": "https://armeninan-alphabet.firebaseio.com",
+    "project_id": "armeninan-alphabet",
+    "storage_bucket": "armeninan-alphabet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619507729231:android:b055f65c75353f8a",
+        "android_client_info": {
+          "package_name": "com.pupupon.armenianalphabet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619507729231-jvu6uf3d93svsaonf8np499dmuef93fk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pupupon.armenianalphabet",
+            "certificate_hash": "0c827dc910ff42e0bc2f2bfbde00bccf974506da"
+          }
+        },
+        {
+          "client_id": "619507729231-2sviertt6a6e8o671if1po8o13kkidt0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGdS3tYkqZWitwKLCUrvLryCtlidO7cZs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619507729231-2sviertt6a6e8o671if1po8o13kkidt0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
