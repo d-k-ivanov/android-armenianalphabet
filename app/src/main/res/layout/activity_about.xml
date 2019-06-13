@@ -21,6 +21,7 @@
         android:text="@string/aboutText"
         android:layout_width="match_parent"
         android:layout_gravity="bottom"
+        android:padding="16dp"
         android:autoLink="web"
         android:textStyle="bold"
         android:textSize="@dimen/textAbout"
@@ -32,6 +33,7 @@
         android:gravity="bottom|center_horizontal"
         android:layout_gravity="bottom"
         android:autoLink="web"
+        android:padding="16dp"
         android:lines="3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

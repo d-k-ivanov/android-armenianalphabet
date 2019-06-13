@@ -9,9 +9,17 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
 
-public class AlphabetActivity extends AppCompatActivity implements OnClickListener {
+import com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsActivity;
+
+import static com.pupupon.armenianalphabet.Tools.RAW;
+import static com.pupupon.armenianalphabet.Tools.STRING;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_LISTEN;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_NEXT;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_PREVIOUS;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.CATEGORY_SOUND_EVENTS;
+
+public class AlphabetActivity extends GoogleAnalyticsActivity implements OnClickListener {
     int globalPosition = 0;
     // Vars:
     private TextView upperCaseText;
@@ -47,16 +55,19 @@ public class AlphabetActivity extends AppCompatActivity implements OnClickListen
         switch (view.getId()) {
             case R.id.alphabetListen:
                 listen();
+                userAction(ACTION_LISTEN);
                 break;
             case R.id.alphabetPrevious:
                 previousLetter();
                 setup();
                 listen();
+                userAction(ACTION_PREVIOUS);
                 break;
             case R.id.alphabetNext:
                 nextLetter();
                 setup();
                 listen();
+                userAction(ACTION_NEXT);
                 break;
         }
     }
@@ -64,10 +75,15 @@ public class AlphabetActivity extends AppCompatActivity implements OnClickListen
     private void setup(){
         String armPrefix = (Storage.getEasternArmenian() ? getString(R.string.eastern) : getString(R.string.western)) + " ";
         this.getSupportActionBar().setTitle(armPrefix + getString(R.string.app_name) + ": " + (globalPosition+1)+ " of 39");
-        String[] letter = ((String) getResources().getText(getResources().getIdentifier(letters[globalPosition], "string", "com.pupupon.armenianalphabet"))).split(";");
+        String[] letter = getLetters(letters[globalPosition]);
         upperCaseText.setText(letter[0]);
         lowerCaseText.setText(letter[1]);
         soundText.setText(letter[2]);
+    }
+
+    private String[] getLetters(String letter) {
+        return ((String) getResources().getText(getResources()
+            .getIdentifier(letter, STRING, getPackageName()))).split(";");
     }
 
     private void setLetterArrayValue() {
@@ -81,10 +97,9 @@ public class AlphabetActivity extends AppCompatActivity implements OnClickListen
         final View view = buttons[0];
         view.setBackgroundResource(R.drawable.button_green);
         view.setEnabled(false);
-
-        Tools.playSound(this, getResources().getIdentifier(letters[globalPosition], "raw", "com.pupupon.armenianalphabet"));
-        //Tools.playSoundFromAsset(this, "audio/" + letters[globalPosition] + ".ogg");
-
+        String letter = letters[globalPosition];
+        setEvent(CATEGORY_SOUND_EVENTS, ACTION_LISTEN, getLetters(letter)[0]);
+        Tools.playSound(this, getResources().getIdentifier(letter, RAW, getPackageName()));
         // Execute some code after 2 seconds have passed
         Handler handler1 = new Handler();
         handler1.postDelayed(new Runnable() {
