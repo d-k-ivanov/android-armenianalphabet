@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsActivity;
+import com.pupupon.armenianalphabet.utils.DefensiveURLSpan;
 
 import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_ABOUT;
 import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_ALPHABET;
@@ -38,7 +39,13 @@ public class MainMenu extends GoogleAnalyticsActivity {
         buttons[2] = findViewById(R.id.menuEntry3);
         /*buttons[2] = (Button) findViewById(R.id.menuEntry4);*/
         buttons[3] = findViewById(R.id.menuEntry5);
-        setUrlClickListener((TextView)findViewById(R.id.aboutCopyright));
+        DefensiveURLSpan.setUrlClickListener((TextView) findViewById(R.id.aboutCopyright),
+            new DefensiveURLSpan.OnUrlListener() {
+                @Override
+                public void onClick(String url) {
+                    userAction(ACTION_GITHUB, url);
+                }
+            });
         // Init Buttons:
         for (Button i : buttons) {
             i.setTypeface(mainFont);
@@ -98,35 +105,5 @@ public class MainMenu extends GoogleAnalyticsActivity {
     private void setTittle() {
         String armPrefix = (Storage.getEasternArmenian() ? getString(R.string.eastern) : getString(R.string.western)) + " ";
         this.getSupportActionBar().setTitle(armPrefix + getString(R.string.app_name));
-    }
-
-    private void setUrlClickListener(TextView tv) {
-        SpannableString current = (SpannableString) tv.getText();
-        URLSpan[] spans =
-            current.getSpans(0, current.length(), URLSpan.class);
-
-        for (URLSpan span : spans) {
-            int start = current.getSpanStart(span);
-            int end = current.getSpanEnd(span);
-
-            current.removeSpan(span);
-            current.setSpan(new DefensiveURLSpan(span.getURL()), start, end,
-                0);
-        }
-    }
-
-    public class DefensiveURLSpan extends URLSpan {
-        private String mUrl;
-
-        public DefensiveURLSpan(String url) {
-            super(url);
-            mUrl = url;
-        }
-
-        @Override
-        public void onClick(View widget) {
-            super.onClick(widget);
-            MainMenu.this.userAction(ACTION_GITHUB, mUrl);
-        }
     }
 }

@@ -1,11 +1,15 @@
 package com.pupupon.armenianalphabet;
 
 import android.graphics.Typeface;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class AboutActivity extends AppCompatActivity {
+import com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsActivity;
+import com.pupupon.armenianalphabet.utils.DefensiveURLSpan;
+
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_GITHUB;
+
+public class AboutActivity extends GoogleAnalyticsActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,5 +22,14 @@ public class AboutActivity extends AppCompatActivity {
         TextView aboutCopyright = (TextView) findViewById(R.id.aboutCopyright);
         aboutText.setTypeface(mainFont);
         aboutCopyright.setTypeface(mainFont);
+        DefensiveURLSpan.setUrlClickListener(aboutText, mUrlListener);
+        DefensiveURLSpan.setUrlClickListener(aboutCopyright, mUrlListener);
     }
+
+    DefensiveURLSpan.OnUrlListener mUrlListener = new DefensiveURLSpan.OnUrlListener() {
+        @Override
+        public void onClick(String url) {
+            userAction(ACTION_GITHUB, url);
+        }
+    };
 }
