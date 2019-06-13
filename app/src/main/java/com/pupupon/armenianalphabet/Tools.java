@@ -10,6 +10,11 @@ import java.io.IOException;
 import java.util.Random;
 
 class Tools {
+
+    public static final String STRING = "string";
+    public static final String RAW = "raw";
+
+
     /**
      * Returns a pseudo-random number between min and max, inclusive.
      * The difference between min and max can be at most
