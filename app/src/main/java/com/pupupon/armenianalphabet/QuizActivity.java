@@ -3,7 +3,6 @@ package com.pupupon.armenianalphabet;
 import android.graphics.Typeface;
 import android.os.Handler;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.widget.TextViewCompat;
 import android.view.View;
@@ -15,7 +14,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.os.Bundle;
 
-public class QuizActivity extends AppCompatActivity implements OnClickListener, OnLongClickListener {
+import com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsActivity;
+
+import static com.pupupon.armenianalphabet.Tools.STRING;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTIONL_PASS;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_FAIL;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.CATEGORY_QUIZ_EVENTS;
+
+public class QuizActivity extends GoogleAnalyticsActivity implements OnClickListener, OnLongClickListener {
     private Button[] buttons =  new Button[4];
     private TextView resultText;
     private Question q;
@@ -59,13 +65,17 @@ public class QuizActivity extends AppCompatActivity implements OnClickListener, 
 
         // Initialize question by random number:
         String[] letters = Tools.randLetters(1,39);
-        String lt1 = (String) getResources().getText(getResources().getIdentifier(letters[0], "string", "com.pupupon.armenianalphabet"));
-        String lt2 = (String) getResources().getText(getResources().getIdentifier(letters[1], "string", "com.pupupon.armenianalphabet"));
-        String lt3 = (String) getResources().getText(getResources().getIdentifier(letters[2], "string", "com.pupupon.armenianalphabet"));
-        String lt4 = (String) getResources().getText(getResources().getIdentifier(letters[3], "string", "com.pupupon.armenianalphabet"));
+        String lt1 = getPronunciation(letters[0]);
+        String lt2 = getPronunciation(letters[1]);
+        String lt3 = getPronunciation(letters[2]);
+        String lt4 = getPronunciation(letters[3]);
         q = new Question(lt1,lt2,lt3,lt4);
-        q.initQuestion(questionText,buttons);
+        q.initQuestion(questionText, buttons);
+    }
 
+    private String getPronunciation(String letter) {
+        return (String) getResources().getText(getResources()
+            .getIdentifier(letter, STRING, getPackageName()));
     }
 
     public void onClick(View view) {
@@ -76,7 +86,7 @@ public class QuizActivity extends AppCompatActivity implements OnClickListener, 
 
         Button button = (Button) view;
         if (q.checkQuestion((String) button.getText())) {
-
+            setEvent(CATEGORY_QUIZ_EVENTS, ACTIONL_PASS, q.getRightAnswer());
             button.setBackgroundResource(R.drawable.button_green);
             TextViewCompat.setTextAppearance(button, R.style.answerCorrectButton);
 
@@ -84,6 +94,7 @@ public class QuizActivity extends AppCompatActivity implements OnClickListener, 
 
         }
         else {
+            setEvent(CATEGORY_QUIZ_EVENTS, ACTION_FAIL, q.getRightAnswer());
             button.setBackgroundResource(R.drawable.button_red);
             TextViewCompat.setTextAppearance(button, R.style.answerIncorrectButton);
 
