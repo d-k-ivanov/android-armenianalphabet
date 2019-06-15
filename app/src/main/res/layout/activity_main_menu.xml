@@ -35,6 +35,11 @@
             android:id="@+id/menuEntry5"
             android:onClick="startMenuEntry5"
             style="@style/menuEntry" />
+        <Button
+            android:text="@string/menuEntry6"
+            android:id="@+id/menuEntry6"
+            android:onClick="startMenuEntry6"
+            style="@style/menuEntry" />
 
         <TextView
             android:id="@+id/aboutCopyright"

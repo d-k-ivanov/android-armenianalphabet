@@ -9,7 +9,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
-
 import com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsActivity;
 
 import static com.pupupon.armenianalphabet.Tools.RAW;

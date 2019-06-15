@@ -25,7 +25,7 @@ import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConsta
 
 public class MainMenu extends GoogleAnalyticsActivity {
     // Vars:
-    Button[] buttons = new Button[4];
+    Button[] buttons = new Button[5];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,7 @@ public class MainMenu extends GoogleAnalyticsActivity {
         buttons[2] = findViewById(R.id.menuEntry3);
         /*buttons[2] = (Button) findViewById(R.id.menuEntry4);*/
         buttons[3] = findViewById(R.id.menuEntry5);
+        buttons[4] = findViewById(R.id.menuEntry6);
         DefensiveURLSpan.setUrlClickListener((TextView) findViewById(R.id.aboutCopyright),
             new DefensiveURLSpan.OnUrlListener() {
                 @Override
@@ -54,7 +55,6 @@ public class MainMenu extends GoogleAnalyticsActivity {
         Storage.init(getApplicationContext());
         buttons[2].setText(getPronunciationIndication());
         setTittle();
-
     }
 
     public void startMenuEntry1(View view) {
@@ -84,6 +84,11 @@ public class MainMenu extends GoogleAnalyticsActivity {
         userAction(ACTION_ABOUT);
         Intent about = new Intent(this, AboutActivity.class);
         startActivity(about);
+    }
+
+    public void startMenuEntry6(View view) {
+        Intent policy = new Intent(this, PrivacyPolicyActivity.class);
+        startActivity(policy);
     }
 
     private int getPronunciationIndication() {

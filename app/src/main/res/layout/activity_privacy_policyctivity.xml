@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about"
+    tools:context="com.pupupon.armenianalphabet.AboutActivity"
+    style="@style/AppTheme" >
+
+    <WebView
+        android:id="@+id/privacyWebView"
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:autoLink="web"
+        android:scaleType="fitCenter"
+        android:layout_weight="2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/aboutCopyright"
+        android:text="@string/aboutCopyright"
+        android:gravity="bottom|center_horizontal"
+        android:layout_gravity="bottom"
+        android:autoLink="web"
+        android:padding="16dp"
+        android:lines="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

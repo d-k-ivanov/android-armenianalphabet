@@ -52,6 +52,12 @@
             android:label="@string/about_title"
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTop" />
+        <!-- Privacy Policy Activity -->
+        <activity
+            android:name=".PrivacyPolicyActivity"
+            android:label="@string/policy_title"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
 
     </application>
 
