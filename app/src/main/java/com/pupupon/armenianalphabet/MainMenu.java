@@ -81,14 +81,15 @@ public class MainMenu extends GoogleAnalyticsActivity {
     }
 
     public void startMenuEntry5(View view) {
-        userAction(ACTION_ABOUT);
-        Intent about = new Intent(this, AboutActivity.class);
-        startActivity(about);
+        Intent policy = new Intent(this, PrivacyPolicyActivity.class);
+        startActivity(policy);
+
     }
 
     public void startMenuEntry6(View view) {
-        Intent policy = new Intent(this, PrivacyPolicyActivity.class);
-        startActivity(policy);
+        userAction(ACTION_ABOUT);
+        Intent about = new Intent(this, AboutActivity.class);
+        startActivity(about);
     }
 
     private int getPronunciationIndication() {

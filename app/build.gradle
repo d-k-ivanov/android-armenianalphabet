@@ -8,8 +8,8 @@ android {
         applicationId 'com.pupupon.armenianalphabet'
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 14
-        versionName "1.14"
+        versionCode 15
+        versionName "1.15"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

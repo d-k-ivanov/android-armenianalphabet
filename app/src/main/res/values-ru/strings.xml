@@ -7,6 +7,7 @@
     <string name="settings_title">Армянский Алфавит: Настройки</string>
     <string name="help_title">Армянский Алфавит: Помощь</string>
     <string name="about_title">Армянский Алфавит: О программе</string>
+    <string name="policy_title">Armenian Alphabet: Политики конфиденциальности</string>
 
     <!-- Menu -->
     <string name="menuEntry1">Алфавит</string>

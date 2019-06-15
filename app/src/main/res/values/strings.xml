@@ -6,15 +6,15 @@
     <string name="settings_title">Armenian Alphabet: Settings</string>
     <string name="help_title">Armenian Alphabet: Help</string>
     <string name="about_title">Armenian Alphabet: About</string>
-    <string name="policy_title">Armenian Alphabet: About</string>
+    <string name="policy_title">Armenian Alphabet: Privacy Policy</string>
 
     <!-- Menu -->
     <string name="menuEntry1">Alphabet</string>
     <string name="menuEntry2">Quiz</string>
     <string name="menuEntry3">Pronunciation switch</string>
     <string name="menuEntry4">Help</string>
-    <string name="menuEntry5">About</string>
-    <string name="menuEntry6">Privacy Policy</string>
+    <string name="menuEntry5">Privacy Policy</string>
+    <string name="menuEntry6">About</string>
 
     <!-- Alphabet -->
     <string name="alphabetUpper">Upper:</string>

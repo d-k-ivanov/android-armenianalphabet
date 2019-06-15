@@ -16,7 +16,6 @@ public class PrivacyPolicyActivity extends Activity {
 
         WebSettings webSetting = webView.getSettings();
         webSetting.setBuiltInZoomControls(true);
-        webSetting.setJavaScriptEnabled(true);
 
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("file:///android_asset/privacy_policy.html");
@@ -31,16 +30,3 @@ public class PrivacyPolicyActivity extends Activity {
         }
     }
 }
-
-/*
-    WebView web;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_privacy_policyctivity);
-        web =(WebView)findViewById(R.id.webView);
-        web.loadUrl("file:///android_asset/privacy_policy.html");
-    }
-}
-*/
