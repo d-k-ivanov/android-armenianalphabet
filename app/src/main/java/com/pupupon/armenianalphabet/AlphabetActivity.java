@@ -73,7 +73,9 @@ public class AlphabetActivity extends GoogleAnalyticsActivity implements OnClick
 
     private void setup(){
         String armPrefix = (Storage.getEasternArmenian() ? getString(R.string.eastern) : getString(R.string.western)) + " ";
-        this.getSupportActionBar().setTitle(armPrefix + getString(R.string.app_name) + ": " + (globalPosition+1)+ " of 39");
+        if(this.getSupportActionBar() != null) {
+            this.getSupportActionBar().setTitle(armPrefix + getString(R.string.app_name) + ": " + (globalPosition + 1) + " of 39");
+        }
         String[] letter = getLetters(letters[globalPosition]);
         upperCaseText.setText(letter[0]);
         lowerCaseText.setText(letter[1]);

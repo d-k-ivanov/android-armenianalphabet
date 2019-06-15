@@ -45,10 +45,10 @@ public class QuizActivity extends GoogleAnalyticsActivity implements OnClickList
         questionText.setTypeface(mainFont);
 
         // Answer Section
-        buttons[0] = (Button) findViewById(R.id.answer1);
-        buttons[1] = (Button) findViewById(R.id.answer2);
-        buttons[2] = (Button) findViewById(R.id.answer3);
-        buttons[3] = (Button) findViewById(R.id.answer4);
+        buttons[0] = findViewById(R.id.answer1);
+        buttons[1] = findViewById(R.id.answer2);
+        buttons[2] = findViewById(R.id.answer3);
+        buttons[3] = findViewById(R.id.answer4);
 
         // Init Buttons:
         for (Button i: buttons) {
@@ -57,7 +57,7 @@ public class QuizActivity extends GoogleAnalyticsActivity implements OnClickList
         }
 
         // Result Section:
-        resultText = (TextView) findViewById(R.id.textResult);
+        resultText = findViewById(R.id.textResult);
 
         // Init Result:
         TextViewCompat.setTextAppearance(resultText, R.style.resultSectionHidden);
@@ -146,6 +146,8 @@ public class QuizActivity extends GoogleAnalyticsActivity implements OnClickList
 
     private void setTittle() {
         String armPrefix = (Storage.getEasternArmenian() ? getString(R.string.eastern) : getString(R.string.western)) + " ";
-        this.getSupportActionBar().setTitle(armPrefix + getString(R.string.quiz_title));
+        if(this.getSupportActionBar() != null) {
+            this.getSupportActionBar().setTitle(armPrefix + getString(R.string.quiz_title));
+        }
     }
 }

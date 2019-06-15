@@ -37,9 +37,10 @@ public class MainMenu extends GoogleAnalyticsActivity {
         buttons[0] = findViewById(R.id.menuEntry1);
         buttons[1] = findViewById(R.id.menuEntry2);
         buttons[2] = findViewById(R.id.menuEntry3);
-        /*buttons[2] = (Button) findViewById(R.id.menuEntry4);*/
+        /*buttons[2] = findViewById(R.id.menuEntry4);*/
         buttons[3] = findViewById(R.id.menuEntry5);
         buttons[4] = findViewById(R.id.menuEntry6);
+
         DefensiveURLSpan.setUrlClickListener((TextView) findViewById(R.id.aboutCopyright),
             new DefensiveURLSpan.OnUrlListener() {
                 @Override
@@ -110,6 +111,8 @@ public class MainMenu extends GoogleAnalyticsActivity {
 
     private void setTittle() {
         String armPrefix = (Storage.getEasternArmenian() ? getString(R.string.eastern) : getString(R.string.western)) + " ";
-        this.getSupportActionBar().setTitle(armPrefix + getString(R.string.app_name));
+        if(this.getSupportActionBar() != null){
+            this.getSupportActionBar().setTitle(armPrefix + getString(R.string.app_name));
+        }
     }
 }

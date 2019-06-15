@@ -12,7 +12,7 @@ public class PrivacyPolicyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_privacy_policyctivity);
 
-        webView = (WebView)findViewById(R.id.privacyWebView);
+        webView = findViewById(R.id.privacyWebView);
 
         WebSettings webSetting = webView.getSettings();
         webSetting.setBuiltInZoomControls(true);

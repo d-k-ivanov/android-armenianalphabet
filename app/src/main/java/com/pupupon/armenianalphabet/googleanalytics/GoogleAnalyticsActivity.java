@@ -1,5 +1,6 @@
 package com.pupupon.armenianalphabet.googleanalytics;
 
+import android.annotation.SuppressLint;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +17,7 @@ import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConsta
 import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.LABEL_LANDSCAPE;
 import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.LABEL_PORTRAIT;
 
+@SuppressLint("Registered")
 public class GoogleAnalyticsActivity extends AppCompatActivity {
 
     private final String ACTION = "action";
