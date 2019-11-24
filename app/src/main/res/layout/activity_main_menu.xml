@@ -25,11 +25,11 @@
             android:id="@+id/menuEntry3"
             android:onClick="startMenuEntry3"
             style="@style/menuEntry" />
-        <!--<Button
+        <Button
             android:text="@string/menuEntry4"
             android:id="@+id/menuEntry4"
             android:onClick="startMenuEntry4"
-            style="@style/menuEntry" />-->
+            style="@style/menuEntry" />
         <Button
             android:text="@string/menuEntry5"
             android:id="@+id/menuEntry5"

@@ -2,7 +2,7 @@
 <resources>
     <!-- Activities -->
     <string name="app_name">Армянский Алфавит</string>
-    <string name="alphabet_title">Армянский Алфавит: Алфавит</string>
+    <string name="learn_title">Армянский Алфавит: Алфавит</string>
     <string name="quiz_title">Армянский Алфавит: Практика</string>
     <string name="settings_title">Армянский Алфавит: Настройки</string>
     <string name="help_title">Армянский Алфавит: Помощь</string>
@@ -10,10 +10,10 @@
     <string name="policy_title">Armenian Alphabet: Политики конфиденциальности</string>
 
     <!-- Menu -->
-    <string name="menuEntry1">Алфавит</string>
-    <string name="menuEntry2">Практика</string>
-    <string name="menuEntry3">Переключатель произношения</string>
-    <string name="menuEntry4">Помощь</string>
+    <string name="menuEntry2">Алфавит</string>
+    <string name="menuEntry3">Практика</string>
+    <string name="menuEntry4">Переключатель произношения</string>
+    <string name="menuEntry1">Помощь</string>
     <string name="menuEntry5">О программе</string>
     <string name="menuEntry6">Политики конфиденциальности</string>
 

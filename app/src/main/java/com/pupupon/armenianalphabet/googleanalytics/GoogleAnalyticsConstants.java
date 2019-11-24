@@ -8,6 +8,7 @@ public class GoogleAnalyticsConstants {
     public static final String ACTION_ORIENTATION_SCREEN = "action_orientation_change";
     public static final String ACTION_SWITCH_PRONUNCIATION = "action_switch_pronunciation";
     public static final String ACTION_ALPHABET = "action_alphabet";
+    public static final String ACTION_LEARN = "action_learn";
     public static final String ACTION_QUIZ = "action_quiz";
     public static final String ACTION_ABOUT = "action_about";
     public static final String ACTION_GITHUB = "action_github";
@@ -18,7 +19,7 @@ public class GoogleAnalyticsConstants {
     public static final String LABEL_WESTERN = "label_western";
 
 
-    //AlphabetActivity.java
+    //LearnActivity.java
     public static final String CATEGORY_SOUND_EVENTS = "category_sound_events";
 
     public static final String ACTION_LISTEN = "action_listen";
