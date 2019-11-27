@@ -30,7 +30,7 @@ public class LearnActivity extends GoogleAnalyticsActivity implements OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_learn);
+        setContentView(R.layout.learn_activity);
         Typeface mainFont = Tools.setFont(this);
         upperCaseText = findViewById(R.id.alphabetUpperCase);
         upperCaseText.setTypeface(mainFont);

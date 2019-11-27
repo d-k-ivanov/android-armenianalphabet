@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/alphabet_popup"
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    android:background="@color/colorBackground" android:background="#aaff"-->
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/alphabet_popup_v1"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/alphabet_popup_h1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/alphabet_popup_button_listen"
+                style="@style/aphabetButton"
+                android:text="Listen"/>
+
+            <Button
+                android:id="@+id/alphabet_popup_button_close"
+                style="@style/aphabetButton"
+                android:text="Close"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/alphabet_popup_uppercase"
+            android:gravity="center"
+            android:layout_gravity="center"
+            style="@style/aphabetButton"
+            android:text="UPPERCASE"/>
+
+        <TextView
+            android:id="@+id/alphabet_popup_lowercase"
+            android:gravity="center"
+            android:layout_gravity="center"
+            style="@style/aphabetButton"
+            android:text="lowercase"/>
+
+        <TextView
+            android:id="@+id/alphabet_popup_pronunciation"
+            android:gravity="center"
+            android:layout_gravity="center"
+            style="@style/aphabetButton"
+            android:text="Pronunciation"/>
+
+    </LinearLayout>
+</ScrollView>

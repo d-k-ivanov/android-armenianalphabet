@@ -63,6 +63,14 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1</item>
     </style>
+    <style name="aphabetPopuptButtonListen" parent="aphabetButton">
+        <item name="android:background">@drawable/button_green</item>
+        <item name="android:textColor">@color/greenButtonText</item>
+    </style>
+    <style name="aphabetPopuptButtonClose" parent="aphabetButton">
+        <item name="android:background">@drawable/button_red</item>
+        <item name="android:textColor">@color/redButtonText</item>
+    </style>
 
 
     <!-- Learn -->

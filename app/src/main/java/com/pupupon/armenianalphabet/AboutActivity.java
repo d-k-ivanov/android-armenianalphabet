@@ -14,7 +14,7 @@ public class AboutActivity extends GoogleAnalyticsActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        setContentView(R.layout.about_activity);
 
         Typeface mainFont = Tools.setFont(this);
 

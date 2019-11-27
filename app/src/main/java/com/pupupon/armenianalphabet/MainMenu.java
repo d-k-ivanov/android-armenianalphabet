@@ -30,7 +30,7 @@ public class MainMenu extends GoogleAnalyticsActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        setContentView(R.layout.main_menu_activity);
         Typeface mainFont = Tools.setFont(this);
 
         // Answer Section

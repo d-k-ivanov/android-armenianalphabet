@@ -37,7 +37,7 @@ public class QuizActivity extends GoogleAnalyticsActivity implements OnClickList
     }
 
     public void init() {
-        setContentView(R.layout.activity_quiz);
+        setContentView(R.layout.quiz_activity);
 
         // Question Section
         TextView questionText = (TextView) findViewById(R.id.textQuestion);

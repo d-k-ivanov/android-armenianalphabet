@@ -31,7 +31,6 @@ class Question {
         wrong3 = rawWrong3[answerPosition];
 
         resultText = rawQuestion[0] + " - " + rawQuestion[1] + " - " + rawQuestion[2];
-
     }
 
     boolean checkQuestion(String s) {
@@ -51,5 +50,4 @@ class Question {
     String getRightAnswer() {
         return this.resultText;
     }
-
 }

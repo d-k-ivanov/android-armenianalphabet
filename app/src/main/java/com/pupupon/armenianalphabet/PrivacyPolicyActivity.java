@@ -10,7 +10,7 @@ public class PrivacyPolicyActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_privacy_policyctivity);
+        setContentView(R.layout.privacy_policy_activity);
 
         webView = findViewById(R.id.privacyWebView);
 

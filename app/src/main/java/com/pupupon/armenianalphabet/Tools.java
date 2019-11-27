@@ -11,9 +11,8 @@ import java.util.Random;
 
 class Tools {
 
-    public static final String STRING = "string";
-    public static final String RAW = "raw";
-
+    static final String STRING  = "string";
+    static final String RAW     = "raw";
 
     /**
      * Returns a pseudo-random number between min and max, inclusive.
@@ -39,6 +38,7 @@ class Tools {
         }
         return randomNum;
     }
+
     /**
      * Returns a pseudo-random number between min and max, inclusive.
      * The difference between min and max can be at most
