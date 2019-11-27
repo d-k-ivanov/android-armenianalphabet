@@ -26,8 +26,8 @@
         <!-- Alphabet Activity -->
         <activity
             android:name=".AlphabetActivity"
-            android:label="@string/help_title"
-            android:configChanges="orientation|screenSize"
+            android:label="@string/alphabet_title"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop" />
         <!-- Learn Activity -->
         <activity

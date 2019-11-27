@@ -75,8 +75,8 @@ public class LearnActivity extends GoogleAnalyticsActivity implements OnClickLis
         String armPrefix = (Storage.getEasternArmenian() ? getString(R.string.eastern) : getString(R.string.western)) + " ";
         if(this.getSupportActionBar() != null) {
             this.getSupportActionBar().setTitle(armPrefix + getString(R.string.app_name) + ": " + (globalPosition + 1) + " of 39");
-        }
-        String[] letter = getLetters(letters[globalPosition]);
+    }
+    String[] letter = getLetters(letters[globalPosition]);
         upperCaseText.setText(letter[0]);
         lowerCaseText.setText(letter[1]);
         soundText.setText(letter[2]);

@@ -7,11 +7,14 @@
     <dimen name="menuEntryText">36sp</dimen>
 
     <!-- Alphabet -->
-    <dimen name="textAlphabetDesc">20sp</dimen>
-    <dimen name="textAlphabetBody">40sp</dimen>
     <dimen name="textAlphabetButton">40sp</dimen>
-    <dimen name="textAlphabetButtonListenHeight">80sp</dimen>
-    <dimen name="descTextWidth">0dp</dimen>
+
+    <!-- Learn -->
+    <dimen name="textLearnDesc">20sp</dimen>
+    <dimen name="textLearnBody">40sp</dimen>
+    <dimen name="textLearnButton">40sp</dimen>
+    <dimen name="textLearnButtonListenHeight">80sp</dimen>
+    <dimen name="descLearnTextWidth">0dp</dimen>
 
     <!-- Quiz -->
     <dimen name="textQuestion">120sp</dimen>

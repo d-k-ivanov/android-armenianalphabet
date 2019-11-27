@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_alphabet"
+    android:id="@+id/activity_learn"
     tools:context="com.pupupon.armenianalphabet.LearnActivity"
     android:fitsSystemWindows="true"
     android:gravity="center_vertical"
@@ -15,12 +15,12 @@
         <TextView
             android:text="@string/alphabetUpper"
             android:id="@+id/alphabetUpperCaseDesc"
-            style="@style/alphabetDescription"/>
+            style="@style/learnDescription"/>
 
         <TextView
             android:text="upperCase"
             android:id="@+id/alphabetUpperCase"
-            style="@style/alphabetLetter" />
+            style="@style/learnLetter" />
     </LinearLayout>
 
     <LinearLayout
@@ -31,12 +31,12 @@
         <TextView
             android:text="@string/alphabetLower"
             android:id="@+id/alphabetLowerCaseDesc"
-            style="@style/alphabetDescription" />
+            style="@style/learnDescription" />
 
         <TextView
             android:text="lowerCase"
             android:id="@+id/alphabetLowerCase"
-            style="@style/alphabetLetter" />
+            style="@style/learnLetter" />
 
     </LinearLayout>
 
@@ -49,21 +49,21 @@
         <TextView
             android:text="@string/alphabetPronounce"
             android:id="@+id/alphabetIPADesc"
-            style="@style/alphabetDescription" />
+            style="@style/learnDescription" />
 
         <TextView
             android:text="IPA"
             android:id="@+id/alphabetIPA"
-            style="@style/alphabetLetter" />
+            style="@style/learnLetter" />
     </LinearLayout>
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="@dimen/textAlphabetButtonListenHeight"
+        android:layout_height="@dimen/textLearnButtonListenHeight"
         android:layout_gravity="center_horizontal|center_vertical"
         android:text="@string/alphabetButtonListen"
         android:id="@+id/alphabetListen"
-        style="@style/alphabetListenButton" />
+        style="@style/learnListenButton" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -75,11 +75,11 @@
             android:layout_gravity="center_vertical"
             android:text="@string/alphabetButtonPrevious"
             android:id="@+id/alphabetPrevious"
-            style="@style/alphabetPrevButton" />
+            style="@style/learnPrevButton" />
         <Button
             android:layout_gravity="center_vertical"
             android:text="@string/alphabetButtonNext"
             android:id="@+id/alphabetNext"
-            style="@style/alphabetNextButton" />
+            style="@style/learnNextButton" />
     </LinearLayout>
 </LinearLayout>

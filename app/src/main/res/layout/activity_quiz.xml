@@ -8,7 +8,7 @@
     style="@style/AppTheme" >
 
     <TextView
-        android:text="@string/question"
+
         android:id="@+id/textQuestion"
         style="@style/questionSection" />
 

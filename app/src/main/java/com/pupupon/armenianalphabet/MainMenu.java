@@ -67,7 +67,7 @@ public class MainMenu extends GoogleAnalyticsActivity {
 
     public void startMenuEntry1(View view) {
         userAction(ACTION_ALPHABET);
-        Intent alphabet = new Intent(this, LearnActivity.class);
+        Intent alphabet = new Intent(this, AlphabetActivity.class);
         startActivity(alphabet);
     }
 

@@ -19,11 +19,12 @@ public class AboutActivity extends GoogleAnalyticsActivity {
         Typeface mainFont = Tools.setFont(this);
 
         TextView aboutText = findViewById(R.id.aboutText);
-        TextView aboutCopyright = findViewById(R.id.aboutCopyright);
         aboutText.setTypeface(mainFont);
-        aboutCopyright.setTypeface(mainFont);
         DefensiveURLSpan.setUrlClickListener(aboutText, mUrlListener);
-        DefensiveURLSpan.setUrlClickListener(aboutCopyright, mUrlListener);
+
+//        TextView aboutCopyright = findViewById(R.id.aboutCopyright);
+//        aboutCopyright.setTypeface(mainFont);
+//        DefensiveURLSpan.setUrlClickListener(aboutCopyright, mUrlListener);
     }
 
     DefensiveURLSpan.OnUrlListener mUrlListener = new DefensiveURLSpan.OnUrlListener() {

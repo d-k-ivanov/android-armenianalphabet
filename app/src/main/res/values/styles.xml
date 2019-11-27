@@ -34,7 +34,39 @@
     </style>
 
     <!-- Alphabet -->
-    <style name="alphabetParent">
+    <style name="aphabetParent">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+<!--        <item name="android:layout_marginLeft">10dp</item>-->
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:textColor">@color/blackText</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="aphabetButton" parent="aphabetParent">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/button</item>
+        <item name="android:textColor">@color/defaultButtonText</item>
+        <item name="android:textSize">@dimen/textAlphabetButton</item>
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="aphabetButtonEmpty" parent="aphabetParent">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@color/colorBackground</item>
+        <item name="android:textColor">@color/defaultButtonText</item>
+        <item name="android:textSize">@dimen/textAlphabetButton</item>
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+
+    <!-- Learn -->
+    <style name="learnParent">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10dp</item>
@@ -42,28 +74,28 @@
         <item name="android:textColor">@color/blackText</item>
         <item name="android:layout_gravity">center</item>
     </style>
-    <style name="alphabetDescription" parent="alphabetParent">
-        <item name="android:textSize">@dimen/textAlphabetDesc</item>
+    <style name="learnDescription" parent="learnParent">
+        <item name="android:textSize">@dimen/textLearnDesc</item>
         <item name="android:layout_weight">0.4</item>
     </style>
-    <style name="alphabetLetter" parent="alphabetParent">
-        <item name="android:textSize">@dimen/textAlphabetBody</item>
+    <style name="learnLetter" parent="learnParent">
+        <item name="android:textSize">@dimen/textLearnBody</item>
         <item name="android:layout_weight">0.6</item>
         <item name="android:layout_gravity">fill_horizontal</item>
         <item name="android:textStyle">bold</item>
     </style>
-    <style name="alphabetButton" parent="alphabetParent">
+    <style name="learnButton" parent="learnParent">
         <item name="android:textColor">@color/defaultButtonText</item>
-        <item name="android:textSize">@dimen/textAlphabetButton</item>
+        <item name="android:textSize">@dimen/textLearnButton</item>
         <item name="android:background">@drawable/button</item>
     </style>
-    <style name="alphabetListenButton" parent="alphabetButton">
+    <style name="learnListenButton" parent="learnButton">
         <item name="android:layout_margin">10dp</item>
     </style>
-    <style name="alphabetNextButton" parent="alphabetButton">
+    <style name="learnNextButton" parent="learnButton">
         <item name="android:layout_weight">0.5</item>
     </style>
-    <style name="alphabetPrevButton" parent="alphabetButton">
+    <style name="learnPrevButton" parent="learnButton">
         <item name="android:layout_weight">0.5</item>
     </style>
 

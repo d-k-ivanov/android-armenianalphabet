@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_alphabet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_alphabet_v0"
+        android:gravity="center"
+        android:layout_gravity="center"
+        tools:context="com.pupupon.armenianalphabet.AlphabetActivity"
+        style="@style/AppTheme" >
+
+        <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_alphabet_h1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            tools:context="com.pupupon.armenianalphabet.AlphabetActivity"
+            style="@style/AppTheme" >
+
+            <Button android:id="@+id/letter_btn_1" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_2" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_3" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_4" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_5" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_6" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_7" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_8" android:text="" style="@style/aphabetButton"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_alphabet_h2"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            tools:context="com.pupupon.armenianalphabet.AlphabetActivity"
+            style="@style/AppTheme" >
+
+            <Button android:id="@+id/letter_btn_9" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_10" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_11" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_12" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_13" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_14" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_15" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_16" android:text="" style="@style/aphabetButton"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_alphabet_h3"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            tools:context="com.pupupon.armenianalphabet.AlphabetActivity"
+            style="@style/AppTheme" >
+
+            <Button android:id="@+id/letter_btn_17" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_18" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_19" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_20" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_21" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_22" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_23" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_24" android:text="" style="@style/aphabetButton"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_alphabet_h4"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            tools:context="com.pupupon.armenianalphabet.AlphabetActivity"
+            style="@style/AppTheme" >
+
+            <Button android:id="@+id/letter_btn_25" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_26" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_27" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_28" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_29" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_30" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_31" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_32" android:text="" style="@style/aphabetButton"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_alphabet_h5"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            tools:context="com.pupupon.armenianalphabet.AlphabetActivity"
+            style="@style/AppTheme" >
+
+            <Button android:id="@+id/letter_btn_33" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_34" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_35" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_36" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_37" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_38" android:text="" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_39" android:text="" style="@style/aphabetButton"/>
+            <TextView style="@style/aphabetButtonEmpty"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
