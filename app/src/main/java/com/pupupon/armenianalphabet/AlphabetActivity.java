@@ -1,7 +1,10 @@
 package com.pupupon.armenianalphabet;
 
 import android.graphics.Typeface;
+import android.media.AudioManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.ContextMenu;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -13,6 +16,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import static com.pupupon.armenianalphabet.Tools.RAW;
 import static com.pupupon.armenianalphabet.Tools.STRING;
 
 public class AlphabetActivity extends AppCompatActivity implements View.OnClickListener {
@@ -42,32 +46,19 @@ public class AlphabetActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
-    private String[] getAlphabetEntryArray(String letter) {
-        return ((String) getResources().getText(getResources()
-            .getIdentifier(letter, STRING, getPackageName()))).split(";");
-    }
-
-    private void setTittle() {
-        String armPrefix = (Storage.getEasternArmenian() ? getString(R.string.eastern) : getString(R.string.western)) + " ";
-        if(this.getSupportActionBar() != null) {
-            this.getSupportActionBar().setTitle(armPrefix + getString(R.string.alphabet_title));
-        }
-    }
-
     @Override
     public void onClick(final View view) {
+        Typeface mainFont = Tools.setFont(this);
         Button button = (Button) view;
         button.setBackgroundResource(R.drawable.button_green);
 
-        // inflate the layout of the popup window
+        // Inflate the layout of the popup window
         LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         final View popupView = inflater.inflate(R.layout.alphabet_popup, null);
 
-        // create the popup window
+        // Create the popup window
         int width = LinearLayout.LayoutParams.WRAP_CONTENT;
-//        int width = LinearLayout.LayoutParams.MATCH_PARENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-//        int height = LinearLayout.LayoutParams.MATCH_PARENT;
         boolean focusable = true; // lets taps outside the popup also dismiss it
         final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
 
@@ -79,26 +70,47 @@ public class AlphabetActivity extends AppCompatActivity implements View.OnClickL
 
         upperCaseText = popupView.findViewById(R.id.alphabet_popup_uppercase);
         upperCaseText.setText(letter[0]);
+        upperCaseText.setTypeface(mainFont);
 
         lowerCaseText = popupView.findViewById(R.id.alphabet_popup_lowercase);
         lowerCaseText.setText(letter[1]);
+        lowerCaseText.setTypeface(mainFont);
 
         pronunciationText = popupView.findViewById(R.id.alphabet_popup_pronunciation);
         pronunciationText.setText(letter[2]);
+        pronunciationText.setTypeface(mainFont);
 
-        // show the popup window
-        // which view you pass in doesn't matter, it is only used for the window tolken
+        this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
+        Button button_listen = popupView.findViewById(R.id.alphabet_popup_button_listen);
+        button_listen.setTypeface(mainFont);
+        button_listen.setTag(letter);
+
+        listen(button_listen);
+
+        button_listen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+                listen(view);
+            };
+        });
+
+        Button button_close = popupView.findViewById(R.id.alphabet_popup_button_close);
+        button_close.setTypeface(mainFont);
+        button_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                popupWindow.dismiss();
+            };
+        });
+
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
-
         popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
-
             @Override
             public void onDismiss() {
                 resetButtonsBackground();
             }
         });
 
-        // dismiss the popup window when touched
         popupView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -106,6 +118,35 @@ public class AlphabetActivity extends AppCompatActivity implements View.OnClickL
                 return true;
             }
         });
+    }
+
+    private void listen(final View view) {
+        view.setBackgroundResource(R.drawable.button_green);
+        view.setEnabled(false);
+        String[] letter = (String[]) view.getTag();
+        Tools.playSound(this, getResources().getIdentifier(letter[3], RAW, getPackageName()));
+        Handler handler1 = new Handler();
+        handler1.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                view.setBackgroundResource(R.drawable.button);
+                view.setEnabled(true);
+            }
+        }, 1000);
+    }
+
+    private String[] getAlphabetEntryArray(String letter) {
+        String resources = (String) getResources().getText(getResources()
+            .getIdentifier(letter, STRING, getPackageName()));
+        resources += ";" + letter;
+        return (resources).split(";");
+    }
+
+    private void setTittle() {
+        String armPrefix = (Storage.getEasternArmenian() ? getString(R.string.eastern) : getString(R.string.western)) + " ";
+        if(this.getSupportActionBar() != null) {
+            this.getSupportActionBar().setTitle(armPrefix + getString(R.string.alphabet_title));
+        }
     }
 
     private void resetButtonsBackground() {

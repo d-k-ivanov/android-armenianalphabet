@@ -21,6 +21,7 @@
     <string name="alphabetLower">Lower:</string>
     <string name="alphabetPronounce">Sound:</string>
     <string name="alphabetButtonListen">Listen</string>
+    <string name="alphabetButtonClose">Close</string>
     <string name="alphabetButtonPrevious">Back</string>
     <string name="alphabetButtonNext">Next</string>
 

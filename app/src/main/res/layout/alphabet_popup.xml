@@ -3,60 +3,73 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/alphabet_popup"
     android:background="@color/colorPrimaryDark"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <!--    android:background="@color/colorBackground" android:background="#aaff"-->
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <LinearLayout
-        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/alphabet_popup_v1"
         android:gravity="center"
         android:layout_gravity="center"
+        android:layout_margin="5dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
-            xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/alphabet_popup_h1"
             android:gravity="center"
             android:layout_gravity="center"
             android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <Button
                 android:id="@+id/alphabet_popup_button_listen"
-                style="@style/aphabetButton"
-                android:text="Listen"/>
+                android:textAlignment="center"
+                android:text="@string/alphabetButtonListen"
+                style="@style/aphabetButton"/>
 
             <Button
                 android:id="@+id/alphabet_popup_button_close"
-                style="@style/aphabetButton"
-                android:text="Close"/>
+                android:textAlignment="center"
+                android:text="@string/alphabetButtonClose"
+                style="@style/aphabetButton"/>
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/alphabet_popup_uppercase"
-            android:gravity="center"
-            android:layout_gravity="center"
-            style="@style/aphabetButton"
-            android:text="UPPERCASE"/>
 
-        <TextView
-            android:id="@+id/alphabet_popup_lowercase"
+        <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/alphabet_popup_h2"
             android:gravity="center"
             android:layout_gravity="center"
-            style="@style/aphabetButton"
-            android:text="lowercase"/>
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/alphabet_popup_uppercase"
+                android:textAlignment="center"
+                android:background="@drawable/alphabet_text_view"
+                style="@style/aphabetButton"/>
+
+            <TextView
+                android:id="@+id/alphabet_popup_lowercase"
+                android:textAlignment="center"
+                android:background="@drawable/alphabet_text_view"
+                style="@style/aphabetButton"/>
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/alphabet_popup_pronunciation"
             android:gravity="center"
             android:layout_gravity="center"
-            style="@style/aphabetButton"
-            android:text="Pronunciation"/>
+            android:textAlignment="center"
+            android:background="@drawable/alphabet_text_view"
+            android:layout_width="match_parent"
+            style="@style/aphabetButton"/>
 
     </LinearLayout>
 </ScrollView>

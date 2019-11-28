@@ -22,6 +22,7 @@
     <string name="alphabetLower">Строчная:</string>
     <string name="alphabetPronounce">Звук:</string>
     <string name="alphabetButtonListen">Послушать</string>
+    <string name="alphabetButtonClose">Закрыть</string>
     <string name="alphabetButtonPrevious">Назад</string>
     <string name="alphabetButtonNext">Далее</string>
 
