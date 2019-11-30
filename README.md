@@ -1,5 +1,9 @@
-# Armenian alphabet quiz for Android
+# Armenian Alphabet for Android
 
-### Features
+## Features
 
 ![Features](/misc/initial_sources/Features.png)
+
+## Demo
+
+![Demo](/misc/screenshot/phone.gif)
