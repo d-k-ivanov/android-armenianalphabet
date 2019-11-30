@@ -6,4 +6,4 @@
 
 ## Demo
 
-![Demo](/misc/screenshot/phone.gif)
+![Demo](/misc/screenshot/phone.gif =500x)
