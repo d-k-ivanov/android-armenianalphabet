@@ -15,3 +15,7 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+#hawk
+-dontwarn com.github.orhanobut.**
+-keep class com.orhanobut.hawk.** { *; }

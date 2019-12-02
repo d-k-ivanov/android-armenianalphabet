@@ -166,10 +166,11 @@
             tools:context="com.pupupon.armenianalphabet.AlphabetActivity"
             style="@style/AppTheme" >
 
-            <Button android:id="@+id/letter_btn_37" style="@style/aphabetButton"/>
-            <Button android:id="@+id/letter_btn_38" style="@style/aphabetButton"/>
-            <Button android:id="@+id/letter_btn_39" style="@style/aphabetButton"/>
-            <TextView style="@style/aphabetButtonEmpty"/>
+            <Button android:id="@+id/letter_btn_37"     style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_38"     style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_39"     style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_shift"  style="@style/aphabetButtonShift"/>
+<!--            <TextView style="@style/aphabetButtonEmpty"/>-->
 
         </LinearLayout>
     </LinearLayout>

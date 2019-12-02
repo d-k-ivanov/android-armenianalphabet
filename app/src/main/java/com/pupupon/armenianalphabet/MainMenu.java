@@ -123,8 +123,8 @@ public class MainMenu extends GoogleAnalyticsActivity {
     }
 
     private void setTittle() {
-        String armPrefix = (Storage.getEasternArmenian() ? getString(R.string.eastern) : getString(R.string.western)) + " ";
         if(this.getSupportActionBar() != null){
+            String armPrefix = (Storage.getEasternArmenian() ? getString(R.string.eastern) : getString(R.string.western)) + " ";
             this.getSupportActionBar().setTitle(armPrefix + getString(R.string.app_name));
         }
     }
