@@ -121,12 +121,12 @@
         The Armenian word for "alphabet" is այբուբեն aybuben (Armenian pronunciation: [ɑjbubɛn]), named after the first two letters of the Armenian alphabet: Ա այբ ayb and Բ բեն ben. Armenian is written horizontally, left-to-right.\n\n
         <b>Special thanks to the Frederic Lemieux for the Western Armenian support.</b>\n\n
         <b>Developed by:</b> \n
-        <i>• Dmitriy Ivanov:</i> https://d-k-ivanov.github.io \n
+        <i>• Dmitry Ivanov:</i> https://d-k-ivanov.github.io \n
         <i>• Frederic Lemieux:</i> https://github.com/tagask
     </string>
 
     <string name="aboutCopyright" translatable="false">
-        Copyright © 2016-2020 Dmitriy Ivanov \n
+        Copyright © 2016-2021 Dmitry Ivanov \n
         https://d-k-ivanov.github.io/
     </string>
 
