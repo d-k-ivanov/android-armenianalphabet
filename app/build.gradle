@@ -8,6 +8,7 @@ android {
         applicationId 'com.pupupon.armenianalphabet'
         minSdkVersion 19
         targetSdkVersion 33
+        multiDexEnabled true
         versionCode 23
         versionName "23.05.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -33,7 +34,7 @@ dependencies {
     })
         implementation 'androidx.appcompat:appcompat:1.6.1'
         implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-        implementation 'com.google.android.material:material:1.2.1'
+        implementation 'com.google.android.material:material:1.9.0'
         implementation 'androidx.cardview:cardview:1.0.0'
         implementation "com.orhanobut:hawk:2.0.1"
         implementation 'com.google.firebase:firebase-core:21.1.1'
