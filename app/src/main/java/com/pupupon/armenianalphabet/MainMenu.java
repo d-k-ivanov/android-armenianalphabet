@@ -1,5 +1,14 @@
 package com.pupupon.armenianalphabet;
 
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_ABOUT;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_ALPHABET;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_GITHUB;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_LEARN;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_QUIZ;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_SWITCH_PRONUNCIATION;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.LABEL_EASTERN;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.LABEL_WESTERN;
+
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
@@ -8,19 +17,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-
 import com.google.android.material.snackbar.Snackbar;
 import com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsActivity;
 import com.pupupon.armenianalphabet.utils.DefensiveURLSpan;
-
-import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_ABOUT;
-import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_ALPHABET;
-import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_LEARN;
-import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_GITHUB;
-import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_QUIZ;
-import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_SWITCH_PRONUNCIATION;
-import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.LABEL_EASTERN;
-import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.LABEL_WESTERN;
 
 
 public class MainMenu extends GoogleAnalyticsActivity {
@@ -111,7 +110,7 @@ public class MainMenu extends GoogleAnalyticsActivity {
     }
 
     private void eventSwitchPronunciation() {
-        if(Storage.getEasternArmenian()) {
+        if (Storage.getEasternArmenian()) {
             userAction(ACTION_SWITCH_PRONUNCIATION, LABEL_WESTERN);
         } else {
             userAction(ACTION_SWITCH_PRONUNCIATION, LABEL_EASTERN);
@@ -123,7 +122,7 @@ public class MainMenu extends GoogleAnalyticsActivity {
     }
 
     private void setTittle() {
-        if(this.getSupportActionBar() != null){
+        if (this.getSupportActionBar() != null) {
             String armPrefix = (Storage.getEasternArmenian() ? getString(R.string.eastern) : getString(R.string.western)) + " ";
             this.getSupportActionBar().setTitle(armPrefix + getString(R.string.app_name));
         }

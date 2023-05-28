@@ -1,5 +1,11 @@
 package com.pupupon.armenianalphabet.googleanalytics;
 
+import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_ORIENTATION_SCREEN;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.CATEGORY_USER_EVENTS;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.LABEL_LANDSCAPE;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.LABEL_PORTRAIT;
+
 import android.annotation.SuppressLint;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -10,12 +16,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.pupupon.armenianalphabet.BuildConfig;
-
-import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
-import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_ORIENTATION_SCREEN;
-import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.CATEGORY_USER_EVENTS;
-import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.LABEL_LANDSCAPE;
-import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.LABEL_PORTRAIT;
 
 @SuppressLint("Registered")
 public class GoogleAnalyticsActivity extends AppCompatActivity {

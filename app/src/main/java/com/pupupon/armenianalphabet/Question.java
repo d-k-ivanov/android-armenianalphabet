@@ -2,16 +2,17 @@ package com.pupupon.armenianalphabet;
 
 import android.widget.Button;
 import android.widget.TextView;
+
 import java.util.Arrays;
 import java.util.Collections;
 
 class Question {
-    private String question;
-    private String answer;
-    private String wrong1;
-    private String wrong2;
-    private String wrong3;
-    private String resultText;
+    private final String question;
+    private final String answer;
+    private final String wrong1;
+    private final String wrong2;
+    private final String wrong3;
+    private final String resultText;
 
     Question(String lt1, String lt2, String lt3, String lt4) {
         String[] rawQuestion = lt1.split(";");
@@ -37,12 +38,12 @@ class Question {
         return s.equals(answer);
     }
 
-    void initQuestion(  TextView questionText,Button[] buttons) {
+    void initQuestion(TextView questionText, Button[] buttons) {
         //void initQuestion(  TextView questionText,Button answerButton1,Button answerButton2,Button answerButton3, Button answerButton4) {
         questionText.setText(question);
-        String[] answers = {answer,wrong1,wrong2,wrong3};
+        String[] answers = {answer, wrong1, wrong2, wrong3};
         Collections.shuffle(Arrays.asList(answers));
-        for(int i = 0; i < 4; i++){
+        for (int i = 0; i < 4; i++) {
             buttons[i].setText(answers[i]);
         }
     }

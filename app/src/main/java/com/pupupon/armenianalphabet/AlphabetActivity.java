@@ -1,10 +1,12 @@
 package com.pupupon.armenianalphabet;
 
+import static com.pupupon.armenianalphabet.Tools.RAW;
+import static com.pupupon.armenianalphabet.Tools.STRING;
+
 import android.graphics.Typeface;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.ContextMenu;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -16,20 +18,17 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import static com.pupupon.armenianalphabet.Tools.RAW;
-import static com.pupupon.armenianalphabet.Tools.STRING;
-
 public class AlphabetActivity extends AppCompatActivity implements View.OnClickListener {
-    private int TOTAL_LETTERS           = 39;
-    private int ALPHABET_ENTRY_INDEX    = 1;
-    private Button[]    buttons         = new Button[TOTAL_LETTERS];
-//    private String[][]  letters         = new String[TOTAL_LETTERS][];
-    //    private Typeface mainFont   = Tools.setFont(this);
+    private final int TOTAL_LETTERS = 39;
+    private final Button[] buttons = new Button[TOTAL_LETTERS];
+    private int ALPHABET_ENTRY_INDEX = 1;
+    // private String[][]  letters         = new String[TOTAL_LETTERS][];
+    // private Typeface mainFont   = Tools.setFont(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Typeface mainFont   = Tools.setFont(this);
+        Typeface mainFont = Tools.setFont(this);
         setTittle();
         setContentView(R.layout.alphabet_activity);
 
@@ -37,12 +36,12 @@ public class AlphabetActivity extends AppCompatActivity implements View.OnClickL
             int index = i - 1;
             final String letterResource = Tools.getFileResourceName() + i;
             final String[] alphabetEntry = getAlphabetEntryArray(letterResource);
-            int id = getResources().getIdentifier("letter_btn_"+i, "id", getApplicationContext().getPackageName());
+            int id = getResources().getIdentifier("letter_btn_" + i, "id", getApplicationContext().getPackageName());
             buttons[index] = findViewById(id);
             buttons[index].setTypeface(mainFont);
             buttons[index].setText(alphabetEntry[ALPHABET_ENTRY_INDEX]);
             buttons[index].setTag(alphabetEntry);
-//            buttons[index].setTooltipText(letterResource);
+            // buttons[index].setTooltipText(letterResource);
             buttons[index].setOnClickListener(this);
         }
 
@@ -56,7 +55,7 @@ public class AlphabetActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(final View view) {
         Button button = (Button) view;
 
-        if(button.getId() == R.id.letter_btn_shift){
+        if (button.getId() == R.id.letter_btn_shift) {
             button.setActivated(ALPHABET_ENTRY_INDEX != 0);
             changeCase();
             return;
@@ -104,7 +103,7 @@ public class AlphabetActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onClick(final View view) {
                 listen(view);
-            };
+            }
         });
 
         Button button_close = popupView.findViewById(R.id.alphabet_popup_button_close);
@@ -113,7 +112,7 @@ public class AlphabetActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onClick(final View v) {
                 popupWindow.dismiss();
-            };
+            }
         });
 
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
@@ -164,14 +163,14 @@ public class AlphabetActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void setTittle() {
-        if(this.getSupportActionBar() != null) {
+        if (this.getSupportActionBar() != null) {
             String armPrefix = (Storage.getEasternArmenian() ? getString(R.string.eastern) : getString(R.string.western)) + " ";
             this.getSupportActionBar().setTitle(armPrefix + getString(R.string.alphabet_title));
         }
     }
 
     private void resetButtonsBackground() {
-        for(Button b: buttons) {
+        for (Button b : buttons) {
             b.setBackgroundResource(R.drawable.button);
         }
     }

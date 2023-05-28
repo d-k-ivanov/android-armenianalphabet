@@ -3,13 +3,13 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
     }
-    compileSdkVersion 30
+    compileSdkVersion 33
     defaultConfig {
         applicationId 'com.pupupon.armenianalphabet'
         minSdkVersion 16
-        targetSdkVersion 30
-        versionCode 22
-        versionName "20.12.7"
+        targetSdkVersion 33
+        versionCode 23
+        versionName "23.05.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

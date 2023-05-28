@@ -11,11 +11,11 @@ class Storage {
         Hawk.init(context).build();
     }
 
-    static void setEasternArmenian(boolean bool) {
-        Hawk.put(EASTERN_ARMENIAN, bool);
-    }
-
     static boolean getEasternArmenian() {
         return Hawk.get(EASTERN_ARMENIAN, true);
+    }
+
+    static void setEasternArmenian(boolean bool) {
+        Hawk.put(EASTERN_ARMENIAN, bool);
     }
 }

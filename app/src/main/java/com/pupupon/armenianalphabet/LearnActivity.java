@@ -1,5 +1,12 @@
 package com.pupupon.armenianalphabet;
 
+import static com.pupupon.armenianalphabet.Tools.RAW;
+import static com.pupupon.armenianalphabet.Tools.STRING;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_LISTEN;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_NEXT;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_PREVIOUS;
+import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.CATEGORY_SOUND_EVENTS;
+
 import android.graphics.Typeface;
 import android.media.AudioManager;
 import android.os.Bundle;
@@ -11,21 +18,14 @@ import android.widget.TextView;
 
 import com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsActivity;
 
-import static com.pupupon.armenianalphabet.Tools.RAW;
-import static com.pupupon.armenianalphabet.Tools.STRING;
-import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_LISTEN;
-import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_NEXT;
-import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_PREVIOUS;
-import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.CATEGORY_SOUND_EVENTS;
-
 public class LearnActivity extends GoogleAnalyticsActivity implements OnClickListener {
+    private final Button[] buttons = new Button[3];
+    private final String[] letters = new String[39];
     int globalPosition = 0;
     // Vars:
     private TextView upperCaseText;
     private TextView lowerCaseText;
     private TextView soundText;
-    private Button[] buttons = new Button[3];
-    private String[] letters = new String[39];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,12 +71,12 @@ public class LearnActivity extends GoogleAnalyticsActivity implements OnClickLis
         }
     }
 
-    private void setup(){
-        if(this.getSupportActionBar() != null) {
+    private void setup() {
+        if (this.getSupportActionBar() != null) {
             String armPrefix = (Storage.getEasternArmenian() ? getString(R.string.eastern) : getString(R.string.western)) + " ";
             this.getSupportActionBar().setTitle(armPrefix + getString(R.string.app_name) + ": " + (globalPosition + 1) + " of 39");
-    }
-    String[] letter = getLetters(letters[globalPosition]);
+        }
+        String[] letter = getLetters(letters[globalPosition]);
         upperCaseText.setText(letter[0]);
         lowerCaseText.setText(letter[1]);
         soundText.setText(letter[2]);

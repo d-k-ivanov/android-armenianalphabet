@@ -102,10 +102,10 @@
             tools:context="com.pupupon.armenianalphabet.AlphabetActivity"
             style="@style/AppTheme" >
 
-            <Button android:id="@+id/letter_btn_21" style="@style/aphabetButton"/>
-            <Button android:id="@+id/letter_btn_22" style="@style/aphabetButton"/>
-            <Button android:id="@+id/letter_btn_23" style="@style/aphabetButton"/>
-            <Button android:id="@+id/letter_btn_24" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_21" style="@style/aphabetButton" android:gravity="center_vertical|center_horizontal"/>
+            <Button android:id="@+id/letter_btn_22" style="@style/aphabetButton" android:gravity="center_vertical|center_horizontal"/>
+            <Button android:id="@+id/letter_btn_23" style="@style/aphabetButton" android:gravity="center_vertical|center_horizontal"/>
+            <Button android:id="@+id/letter_btn_24" style="@style/aphabetButton" android:gravity="center_vertical|center_horizontal"/>
 
         </LinearLayout>
 
@@ -118,10 +118,10 @@
             tools:context="com.pupupon.armenianalphabet.AlphabetActivity"
             style="@style/AppTheme" >
 
-            <Button android:id="@+id/letter_btn_25" style="@style/aphabetButton"/>
-            <Button android:id="@+id/letter_btn_26" style="@style/aphabetButton"/>
-            <Button android:id="@+id/letter_btn_27" style="@style/aphabetButton"/>
-            <Button android:id="@+id/letter_btn_28" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_25" style="@style/aphabetButton" android:gravity="center_vertical|center_horizontal"/>
+            <Button android:id="@+id/letter_btn_26" style="@style/aphabetButton" android:gravity="center_vertical|center_horizontal"/>
+            <Button android:id="@+id/letter_btn_27" style="@style/aphabetButton" android:gravity="center_vertical|center_horizontal"/>
+            <Button android:id="@+id/letter_btn_28" style="@style/aphabetButton" android:gravity="center_vertical|center_horizontal"/>
 
         </LinearLayout>
 
@@ -134,10 +134,10 @@
             tools:context="com.pupupon.armenianalphabet.AlphabetActivity"
             style="@style/AppTheme" >
 
-            <Button android:id="@+id/letter_btn_29" style="@style/aphabetButton"/>
-            <Button android:id="@+id/letter_btn_30" style="@style/aphabetButton"/>
-            <Button android:id="@+id/letter_btn_31" style="@style/aphabetButton"/>
-            <Button android:id="@+id/letter_btn_32" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_29" style="@style/aphabetButton" android:gravity="center_vertical|center_horizontal"/>
+            <Button android:id="@+id/letter_btn_30" style="@style/aphabetButton" android:gravity="center_vertical|center_horizontal"/>
+            <Button android:id="@+id/letter_btn_31" style="@style/aphabetButton" android:gravity="center_vertical|center_horizontal"/>
+            <Button android:id="@+id/letter_btn_32" style="@style/aphabetButton" android:gravity="center_vertical|center_horizontal"/>
 
         </LinearLayout>
 
@@ -150,10 +150,10 @@
             tools:context="com.pupupon.armenianalphabet.AlphabetActivity"
             style="@style/AppTheme" >
 
-            <Button android:id="@+id/letter_btn_33" style="@style/aphabetButton"/>
-            <Button android:id="@+id/letter_btn_34" style="@style/aphabetButton"/>
-            <Button android:id="@+id/letter_btn_35" style="@style/aphabetButton"/>
-            <Button android:id="@+id/letter_btn_36" style="@style/aphabetButton"/>
+            <Button android:id="@+id/letter_btn_33" style="@style/aphabetButton" android:gravity="center_vertical|center_horizontal"/>
+            <Button android:id="@+id/letter_btn_34" style="@style/aphabetButton" android:gravity="center_vertical|center_horizontal"/>
+            <Button android:id="@+id/letter_btn_35" style="@style/aphabetButton" android:gravity="center_vertical|center_horizontal"/>
+            <Button android:id="@+id/letter_btn_36" style="@style/aphabetButton" android:gravity="center_vertical|center_horizontal"/>
 
         </LinearLayout>
 
@@ -166,11 +166,10 @@
             tools:context="com.pupupon.armenianalphabet.AlphabetActivity"
             style="@style/AppTheme" >
 
-            <Button android:id="@+id/letter_btn_37"     style="@style/aphabetButton"/>
-            <Button android:id="@+id/letter_btn_38"     style="@style/aphabetButton"/>
-            <Button android:id="@+id/letter_btn_39"     style="@style/aphabetButton"/>
-            <Button android:id="@+id/letter_btn_shift"  style="@style/aphabetButtonShift"/>
-<!--            <TextView style="@style/aphabetButtonEmpty"/>-->
+            <Button android:id="@+id/letter_btn_37"    style="@style/aphabetButton"      android:gravity="center_vertical|center_horizontal"/>
+            <Button android:id="@+id/letter_btn_38"    style="@style/aphabetButton"      android:gravity="center_vertical|center_horizontal"/>
+            <Button android:id="@+id/letter_btn_39"    style="@style/aphabetButton"      android:gravity="center_vertical|center_horizontal"/>
+            <Button android:id="@+id/letter_btn_shift" style="@style/aphabetButtonShift" android:gravity="center_vertical|center_horizontal"/>
 
         </LinearLayout>
     </LinearLayout>
