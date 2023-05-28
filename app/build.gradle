@@ -23,6 +23,7 @@ android {
     }
     productFlavors {
     }
+    namespace 'com.pupupon.armenianalphabet'
 }
 
 dependencies {
