@@ -39,7 +39,9 @@ public class GoogleAnalyticsActivity extends AppCompatActivity {
         if (DEBUG) {
             Log.d(GoogleAnalyticsActivity.class.getSimpleName(), "screen : " + this.getLocalClassName());
         } else {
-            mFirebaseAnalytics.setCurrentScreen(this, this.getLocalClassName(), null);
+            Bundle bundle = new Bundle();
+            bundle.putString(FirebaseAnalytics.Param.SCREEN_NAME, this.getLocalClassName());
+            mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SCREEN_VIEW, bundle);
         }
     }
 

@@ -10,8 +10,8 @@ import com.pupupon.armenianalphabet.MainMenu;
 import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_GITHUB;
 
 public class DefensiveURLSpan extends URLSpan {
-    private String mUrl;
-    private OnUrlListener mOnUrlListener;
+    private final String mUrl;
+    private final OnUrlListener mOnUrlListener;
 
     public DefensiveURLSpan(String url, OnUrlListener onUrlListener) {
         super(url);

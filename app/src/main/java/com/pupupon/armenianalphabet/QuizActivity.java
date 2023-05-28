@@ -8,6 +8,7 @@ import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConsta
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
@@ -114,7 +115,7 @@ public class QuizActivity extends GoogleAnalyticsActivity implements OnClickList
         resultText.startAnimation(slide);
 
         // Execute some code after 2 seconds have passed
-        Handler handler1 = new Handler();
+        Handler handler1 = new Handler(Looper.getMainLooper());
         handler1.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -129,7 +130,7 @@ public class QuizActivity extends GoogleAnalyticsActivity implements OnClickList
         }, 500);
 
         // Execute some code after 2 seconds have passed
-        Handler handler2 = new Handler();
+        Handler handler2 = new Handler(Looper.getMainLooper());
         handler2.postDelayed(new Runnable() {
             @Override
             public void run() {

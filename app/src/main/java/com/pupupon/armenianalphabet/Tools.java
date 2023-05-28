@@ -5,6 +5,7 @@ import android.content.res.AssetFileDescriptor;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Handler;
+import android.os.Looper;
 
 import java.io.IOException;
 import java.util.Random;
@@ -83,7 +84,7 @@ class Tools {
     static void playSound(Context context, int resource) {
         final MediaPlayer m = MediaPlayer.create(context, resource);
         m.start();
-        Handler handler1 = new Handler();
+        Handler handler1 = new Handler(Looper.getMainLooper());
         handler1.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -105,7 +106,7 @@ class Tools {
             e.printStackTrace();
         }
 
-        Handler handler1 = new Handler();
+        Handler handler1 = new Handler(Looper.getMainLooper());
         handler1.postDelayed(new Runnable() {
             @Override
             public void run() {

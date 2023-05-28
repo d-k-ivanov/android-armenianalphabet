@@ -11,6 +11,7 @@ import android.graphics.Typeface;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -102,7 +103,7 @@ public class LearnActivity extends GoogleAnalyticsActivity implements OnClickLis
         setEvent(CATEGORY_SOUND_EVENTS, ACTION_LISTEN, getLetters(letter)[0]);
         Tools.playSound(this, getResources().getIdentifier(letter, RAW, getPackageName()));
         // Execute some code after 2 seconds have passed
-        Handler handler1 = new Handler();
+        Handler handler1 = new Handler(Looper.getMainLooper());
         handler1.postDelayed(new Runnable() {
             @Override
             public void run() {

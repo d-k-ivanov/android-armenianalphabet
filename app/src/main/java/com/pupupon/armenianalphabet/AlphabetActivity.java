@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -137,7 +138,7 @@ public class AlphabetActivity extends AppCompatActivity implements View.OnClickL
         view.setEnabled(false);
         String[] letter = (String[]) view.getTag();
         Tools.playSound(this, getResources().getIdentifier(letter[3], RAW, getPackageName()));
-        Handler handler1 = new Handler();
+        Handler handler1 = new Handler(Looper.getMainLooper());
         handler1.postDelayed(new Runnable() {
             @Override
             public void run() {

@@ -6,7 +6,7 @@ android {
     compileSdkVersion 33
     defaultConfig {
         applicationId 'com.pupupon.armenianalphabet'
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 33
         versionCode 23
         versionName "23.05.1"
@@ -36,7 +36,7 @@ dependencies {
         implementation 'com.google.android.material:material:1.2.1'
         implementation 'androidx.cardview:cardview:1.0.0'
         implementation "com.orhanobut:hawk:2.0.1"
-        implementation 'com.google.firebase:firebase-core:18.0.0'
+        implementation 'com.google.firebase:firebase-core:21.1.1'
 
         testImplementation 'junit:junit:4.13.1'
 }
