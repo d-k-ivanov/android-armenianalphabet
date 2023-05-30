@@ -11,12 +11,7 @@ import com.pupupon.armenianalphabet.utils.DefensiveURLSpan;
 
 public class AboutActivity extends GoogleAnalyticsActivity {
 
-    DefensiveURLSpan.OnUrlListener mUrlListener = new DefensiveURLSpan.OnUrlListener() {
-        @Override
-        public void onClick(String url) {
-            userAction(ACTION_GITHUB, url);
-        }
-    };
+    DefensiveURLSpan.OnUrlListener mUrlListener = url -> userAction(ACTION_GITHUB, url);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +22,9 @@ public class AboutActivity extends GoogleAnalyticsActivity {
 
         TextView aboutText = findViewById(R.id.aboutText);
         aboutText.setTypeface(mainFont);
-        DefensiveURLSpan.setUrlClickListener(aboutText, mUrlListener);
 
-//        TextView aboutCopyright = findViewById(R.id.aboutCopyright);
-//        aboutCopyright.setTypeface(mainFont);
-//        DefensiveURLSpan.setUrlClickListener(aboutCopyright, mUrlListener);
+        TextView aboutCopyright = findViewById(R.id.aboutCopyright);
+        aboutCopyright.setTypeface(mainFont);
+        DefensiveURLSpan.setUrlClickListener(aboutCopyright, mUrlListener);
     }
 }

@@ -15,7 +15,6 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsActivity;
@@ -45,13 +44,7 @@ public class MainMenu extends GoogleAnalyticsActivity {
             View copyrightView = findViewById(R.id.aboutCopyright);
             copyrightView.setVisibility(View.GONE);
         } else {
-            DefensiveURLSpan.setUrlClickListener((TextView) findViewById(R.id.aboutCopyright),
-                new DefensiveURLSpan.OnUrlListener() {
-                    @Override
-                    public void onClick(String url) {
-                        userAction(ACTION_GITHUB, url);
-                    }
-                });
+            DefensiveURLSpan.setUrlClickListener(findViewById(R.id.aboutCopyright), url -> userAction(ACTION_GITHUB, url));
         }
 
         // Init Buttons:

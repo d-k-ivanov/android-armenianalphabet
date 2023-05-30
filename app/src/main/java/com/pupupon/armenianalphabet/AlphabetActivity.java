@@ -3,6 +3,7 @@ package com.pupupon.armenianalphabet;
 import static com.pupupon.armenianalphabet.Tools.RAW;
 import static com.pupupon.armenianalphabet.Tools.STRING;
 
+import android.annotation.SuppressLint;
 import android.graphics.Typeface;
 import android.media.AudioManager;
 import android.os.Bundle;
@@ -10,7 +11,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -19,12 +19,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+@SuppressLint("DiscouragedApi")
 public class AlphabetActivity extends AppCompatActivity implements View.OnClickListener {
     private final int TOTAL_LETTERS = 39;
     private final Button[] buttons = new Button[TOTAL_LETTERS];
     private int ALPHABET_ENTRY_INDEX = 1;
-    // private String[][]  letters         = new String[TOTAL_LETTERS][];
-    // private Typeface mainFont   = Tools.setFont(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +65,7 @@ public class AlphabetActivity extends AppCompatActivity implements View.OnClickL
 
         // Inflate the layout of the popup window
         LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        @SuppressLint("InflateParams")
         final View popupView = inflater.inflate(R.layout.alphabet_popup, null);
 
         // Create the popup window
@@ -100,36 +100,19 @@ public class AlphabetActivity extends AppCompatActivity implements View.OnClickL
 
         listen(button_listen);
 
-        button_listen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View view) {
-                listen(view);
-            }
-        });
+        button_listen.setOnClickListener(this::listen);
 
         Button button_close = popupView.findViewById(R.id.alphabet_popup_button_close);
         button_close.setTypeface(mainFont);
-        button_close.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View v) {
-                popupWindow.dismiss();
-            }
-        });
+        button_close.setOnClickListener(v -> popupWindow.dismiss());
 
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
-        popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
-            @Override
-            public void onDismiss() {
-                resetButtonsBackground();
-            }
-        });
+        popupWindow.setOnDismissListener(this::resetButtonsBackground);
 
-        popupView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                popupWindow.dismiss();
-                return true;
-            }
+        popupView.setOnTouchListener((v, event) -> {
+            v.performClick();
+            popupWindow.dismiss();
+            return true;
         });
     }
 
@@ -139,12 +122,9 @@ public class AlphabetActivity extends AppCompatActivity implements View.OnClickL
         String[] letter = (String[]) view.getTag();
         Tools.playSound(this, getResources().getIdentifier(letter[3], RAW, getPackageName()));
         Handler handler1 = new Handler(Looper.getMainLooper());
-        handler1.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                view.setBackgroundResource(R.drawable.button);
-                view.setEnabled(true);
-            }
+        handler1.postDelayed(() -> {
+            view.setBackgroundResource(R.drawable.button);
+            view.setEnabled(true);
         }, 1000);
     }
 

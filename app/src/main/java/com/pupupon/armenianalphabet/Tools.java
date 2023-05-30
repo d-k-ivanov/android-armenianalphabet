@@ -7,9 +7,12 @@ import android.media.MediaPlayer;
 import android.os.Handler;
 import android.os.Looper;
 
+import androidx.core.content.res.ResourcesCompat;
+
 import java.io.IOException;
 import java.util.Random;
 
+@SuppressWarnings({"SameParameterValue", "unused"})
 class Tools {
 
     static final String STRING = "string";
@@ -49,16 +52,16 @@ class Tools {
      * @param max Maximum value.  Must be greater than min.
      * @return Integer between min and max, inclusive.
      * @see java.util.Random#nextInt(int)
+     *
+     * public static int randInt(int min, int max) {
+     *     Random rand = new Random();
+     *     // nextInt is normally exclusive of the top value,
+     *     // so add 1 to make it inclusive
+     *     int randomNum = rand.nextInt((max - min) + 1) + min;
+     *     return randomNum;
+     * }
      */
-    /*public static int randInt(int min, int max) {
-        Random rand = new Random();
 
-        // nextInt is normally exclusive of the top value,
-        // so add 1 to make it inclusive
-        int randomNum = rand.nextInt((max - min) + 1) + min;
-
-        return randomNum;
-    }*/
     static String[] randLetters(int min, int max) {
         final String letter = getFileResourceName();
         String[] letters = {"", "", "", ""};
@@ -85,12 +88,7 @@ class Tools {
         final MediaPlayer m = MediaPlayer.create(context, resource);
         m.start();
         Handler handler1 = new Handler(Looper.getMainLooper());
-        handler1.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                m.release();
-            }
-        }, 1000);
+        handler1.postDelayed(m::release, 1000);
     }
 
     public static void playSoundFromAsset(Context context, String fullPath) {
@@ -107,18 +105,10 @@ class Tools {
         }
 
         Handler handler1 = new Handler(Looper.getMainLooper());
-        handler1.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                m.release();
-            }
-        }, 1000);
+        handler1.postDelayed(m::release, 1000);
     }
 
     static Typeface setFont(Context context) {
-        Typeface droidSansArmenian = Typeface.createFromAsset(context.getAssets(), "fonts/DroidSansArmenian.ttf");
-        Typeface sylfaen = Typeface.createFromAsset(context.getAssets(), "fonts/Sylfaen.ttf");
-
-        return sylfaen;
+        return ResourcesCompat.getFont(context, R.font.sylfaen);
     }
 }

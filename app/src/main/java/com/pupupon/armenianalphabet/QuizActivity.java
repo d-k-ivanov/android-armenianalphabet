@@ -5,6 +5,7 @@ import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConsta
 import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_FAIL;
 import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.CATEGORY_QUIZ_EVENTS;
 
+import android.annotation.SuppressLint;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,6 +23,7 @@ import androidx.core.widget.TextViewCompat;
 
 import com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsActivity;
 
+@SuppressLint("DiscouragedApi")
 public class QuizActivity extends GoogleAnalyticsActivity implements OnClickListener, OnLongClickListener {
     private final Button[] buttons = new Button[4];
     private TextView resultText;
@@ -41,7 +43,7 @@ public class QuizActivity extends GoogleAnalyticsActivity implements OnClickList
         setContentView(R.layout.quiz_activity);
 
         // Question Section
-        TextView questionText = (TextView) findViewById(R.id.textQuestion);
+        TextView questionText = findViewById(R.id.textQuestion);
         questionText.setOnLongClickListener(this);
         questionText.setTypeface(mainFont);
 
@@ -116,27 +118,19 @@ public class QuizActivity extends GoogleAnalyticsActivity implements OnClickList
 
         // Execute some code after 2 seconds have passed
         Handler handler1 = new Handler(Looper.getMainLooper());
-        handler1.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                for (Button i : buttons) {
-                    if (q.checkQuestion((String) i.getText())) {
-                        i.setBackgroundResource(R.drawable.button_green);
-                        TextViewCompat.setTextAppearance(i, R.style.answerCorrectButton);
-                        i.startAnimation(bounce);
-                    }
+        handler1.postDelayed(() -> {
+            for (Button i : buttons) {
+                if (q.checkQuestion((String) i.getText())) {
+                    i.setBackgroundResource(R.drawable.button_green);
+                    TextViewCompat.setTextAppearance(i, R.style.answerCorrectButton);
+                    i.startAnimation(bounce);
                 }
             }
         }, 500);
 
         // Execute some code after 2 seconds have passed
         Handler handler2 = new Handler(Looper.getMainLooper());
-        handler2.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                init();
-            }
-        }, 2000);
+        handler2.postDelayed(this::init, 2000);
     }
 
     public boolean onLongClick(View view) {

@@ -5,10 +5,6 @@ import android.text.style.URLSpan;
 import android.view.View;
 import android.widget.TextView;
 
-import com.pupupon.armenianalphabet.MainMenu;
-
-import static com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsConstants.ACTION_GITHUB;
-
 public class DefensiveURLSpan extends URLSpan {
     private final String mUrl;
     private final OnUrlListener mOnUrlListener;
@@ -17,16 +13,6 @@ public class DefensiveURLSpan extends URLSpan {
         super(url);
         mUrl = url;
         mOnUrlListener = onUrlListener;
-    }
-
-    @Override
-    public void onClick(View widget) {
-        super.onClick(widget);
-        mOnUrlListener.onClick(mUrl);
-    }
-
-    public interface OnUrlListener{
-        void onClick(String url);
     }
 
     public static void setUrlClickListener(TextView tv, OnUrlListener onUrlListener) {
@@ -43,5 +29,15 @@ public class DefensiveURLSpan extends URLSpan {
                 0);
         }
 
+    }
+
+    @Override
+    public void onClick(View widget) {
+        super.onClick(widget);
+        mOnUrlListener.onClick(mUrl);
+    }
+
+    public interface OnUrlListener {
+        void onClick(String url);
     }
 }

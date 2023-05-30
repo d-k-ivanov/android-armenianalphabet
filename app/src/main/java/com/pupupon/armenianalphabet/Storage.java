@@ -5,7 +5,7 @@ import android.content.Context;
 import com.orhanobut.hawk.Hawk;
 
 class Storage {
-    private static String EASTERN_ARMENIAN = "eastern_armenian";
+    private static final String EASTERN_ARMENIAN = "eastern_armenian";
 
     static void init(Context context) {
         Hawk.init(context).build();

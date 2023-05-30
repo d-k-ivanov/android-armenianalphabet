@@ -119,10 +119,7 @@
     <string name="aboutText">
         The Armenian alphabet (Arm.: Հայոց գրեր Hayots grer or Հայոց այբուբեն Hayots aybuben) is an alphabetical writing system used to write Armenian. It was developed around 405 CE by Mesrop Mashtots, an Armenian linguist and ecclesiastical leader, and originally included 36 letters and now includes 39.
         The Armenian word for "alphabet" is այբուբեն aybuben (Armenian pronunciation: [ɑjbubɛn]), named after the first two letters of the Armenian alphabet: Ա այբ ayb and Բ բեն ben. Armenian is written horizontally, left-to-right.\n\n
-        <b>Special thanks to the Frederic Lemieux for the Western Armenian support.</b>\n\n
-        <b>Developed by:</b> \n
-        <i>• Dmitry Ivanov:</i> https://d-k-ivanov.github.io \n
-        <i>• Frederic Lemieux:</i> https://github.com/tagask
+        <b>Special thanks to the Frederic Lemieux for the Western Armenian support.</b>
     </string>
 
     <string name="aboutCopyright" translatable="false">

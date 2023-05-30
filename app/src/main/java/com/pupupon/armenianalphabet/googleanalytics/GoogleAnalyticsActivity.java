@@ -11,12 +11,14 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.pupupon.armenianalphabet.BuildConfig;
 
+@SuppressWarnings({"FieldCanBeLocal", "SameParameterValue"})
 @SuppressLint("Registered")
 public class GoogleAnalyticsActivity extends AppCompatActivity {
 
@@ -34,13 +36,13 @@ public class GoogleAnalyticsActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
+    protected void onResume() {
+        super.onResume();
         if (DEBUG) {
             Log.d(GoogleAnalyticsActivity.class.getSimpleName(), "screen : " + this.getLocalClassName());
         } else {
             Bundle bundle = new Bundle();
-            bundle.putString(FirebaseAnalytics.Param.SCREEN_NAME, this.getClass().getSimpleName());
+            bundle.putString(FirebaseAnalytics.Param.SCREEN_NAME, this.getLocalClassName());
             bundle.putString(FirebaseAnalytics.Param.SCREEN_CLASS, this.getLocalClassName());
             mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SCREEN_VIEW, bundle);
         }
@@ -70,7 +72,7 @@ public class GoogleAnalyticsActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onConfigurationChanged(Configuration newConfig) {
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         if (newConfig.orientation == SCREEN_ORIENTATION_PORTRAIT) {
             userAction(ACTION_ORIENTATION_SCREEN, LABEL_PORTRAIT);
