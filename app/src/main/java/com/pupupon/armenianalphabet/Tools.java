@@ -109,6 +109,7 @@ class Tools {
     }
 
     static Typeface setFont(Context context) {
-        return ResourcesCompat.getFont(context, R.font.sylfaen);
+        return ResourcesCompat.getFont(context, R.font.charis_sil_regular);
+//        return ResourcesCompat.getFont(context, R.font.sylfaen);
     }
 }
