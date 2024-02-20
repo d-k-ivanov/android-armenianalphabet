@@ -10,7 +10,6 @@ import com.pupupon.armenianalphabet.googleanalytics.GoogleAnalyticsActivity;
 import com.pupupon.armenianalphabet.utils.DefensiveURLSpan;
 
 public class AboutActivity extends GoogleAnalyticsActivity {
-
     DefensiveURLSpan.OnUrlListener mUrlListener = url -> userAction(ACTION_GITHUB, url);
 
     @Override
