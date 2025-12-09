@@ -9,14 +9,14 @@ android {
         minSdkVersion 21
         targetSdkVersion 36
         multiDexEnabled = true
-        versionCode 33
-        versionName "25.09.01"
+        versionCode 35
+        versionName "25.12.09"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
             debuggable true
@@ -38,7 +38,7 @@ android {
         includeInApk = true
         includeInBundle = true
     }
-    ndkVersion = '29.0.13846066 rc3'
+    ndkVersion = '29.0.14206865'
 }
 
 dependencies {
@@ -50,8 +50,12 @@ dependencies {
         implementation 'androidx.legacy:legacy-support-v4:1.0.0'
         implementation 'com.google.android.material:material:1.12.0'
         implementation 'androidx.cardview:cardview:1.0.0'
-        implementation "com.orhanobut:hawk:2.0.1"
         implementation 'com.google.firebase:firebase-core:21.1.1'
+
+        implementation('com.orhanobut:hawk:2.0.1') {
+            exclude group: 'com.facebook.conceal', module: 'conceal'
+        }
+        implementation files('libs/conceal.aar')
 
         testImplementation 'junit:junit:4.13.2'
 }
